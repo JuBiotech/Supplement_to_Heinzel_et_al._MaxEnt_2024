@@ -77,8 +77,7 @@ model_path = os.path.join("C:/Users/carol/OneDrive/Desktop/Juelich", "e_coli_cor
 #%%
 polytope = PolyRoundApi.sbml_to_polytope(model_path)
 problem_e_coli = hopsy.Problem(polytope.A, polytope.b)
-#%%
-
+problem_e_coli = hopsy.round(problem_e_coli)
 #%%
 print(polytope.A.columns)
 #%%
@@ -87,10 +86,10 @@ chains_e_coli = [hopsy.MarkovChain(problem_e_coli, starting_point = starting_poi
 #%%
 rng = [hopsy.RandomNumberGenerator(seed= i) for i in range(4)]
 #%%
-accrate_e_coli, samples_e_coli = hopsy.sample(chains_e_coli, rng, n_samples=1000, thinning=10)
+accrate_e_coli, samples_e_coli = hopsy.sample(chains_e_coli, rng, n_samples=10000, thinning=10)
 res_konvergenz_e_coli = hopsy.rhat(samples_e_coli)
-#%%
 print(max(res_konvergenz_e_coli[0])) # Sinkt mit zunehmender Stichprobengröße
+# 1.067244131854129 ist der Output
 #%%
 # Gucke für jede Dimension, ob die x-Werte im Poytop enthalten sind
 plt.figure(dpi=300)
