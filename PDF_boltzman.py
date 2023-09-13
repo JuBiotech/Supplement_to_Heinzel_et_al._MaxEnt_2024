@@ -15,11 +15,11 @@ beta = -1
 # Definiere die PDF p(v1_f)
 pdf = sp.exp(beta * v1_f) / sp.integrate(sp.exp(beta * v1_f), (v1_f, 0, 1))
 
-# Definieren Sie die kumulative Verteilungsfunktion (CDF) durch Integration der PDF
+# Definiere CDF
 cdf = sp.integrate(pdf, (v1_f, 0, v1_f))
 
 # Anzahl der gezogenen Stichproben
-num_samples = 100  # Passen Sie die Anzahl der gewünschten Stichproben an
+num_samples = 100  
 
 # Zufällige Stichproben ziehen
 samples = []
