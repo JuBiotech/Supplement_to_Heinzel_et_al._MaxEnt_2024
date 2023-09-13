@@ -6,13 +6,13 @@ import sympy as sp
 import random
 import matplotlib as plt
 #%%
-# Definieren Sie die Variable v1_f als ein Symbol
+# Definiere die Variable v1_f als ein Symbol
 v1_f = sp.symbols('v1_f')
 
-# Definieren Sie den Wert von beta
-beta = -1  # Hier als Beispiel, passen Sie den Wert entsprechend an
+# Definiere den Wert von beta
+beta = -1  
 
-# Definieren Sie die PDF p(v1_f)
+# Definiere die PDF p(v1_f)
 pdf = sp.exp(beta * v1_f) / sp.integrate(sp.exp(beta * v1_f), (v1_f, 0, 1))
 
 # Definieren Sie die kumulative Verteilungsfunktion (CDF) durch Integration der PDF
@@ -30,8 +30,8 @@ for _ in range(num_samples):
     # Umkehrung der CDF, um den entsprechenden v1_f-Wert zu erhalten
     v1_f_sample = sp.solve(cdf - random_value, v1_f)
     
-    # Fügen Sie den gezogenen Wert zur Liste der Stichproben hinzu
-    samples.append(v1_f_sample[0])  # Nehmen Sie den ersten Wert, da solve eine Liste zurückgibt
+    # Füge den gezogenen Wert zur Liste der Stichproben hinzu
+    samples.append(v1_f_sample[0])  
 
 # Ausgabe der gezogenen Stichproben
 print(samples)
@@ -52,11 +52,9 @@ v1_f_values = np.linspace(0, 1, 10)
 pdf_values = [float(pdf.subs(v1_f, value)) for value in v1_f_values]
 plt.plot(v1_f_values, pdf_values, color='red', label='PDF')
 
-# Beschriftungen hinzufügen
 plt.xlabel('v1_f')
 plt.ylabel('Dichte')
 plt.legend()
 
-# Anzeigen des Plots
 plt.show()
 
