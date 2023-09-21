@@ -73,13 +73,24 @@ print(max(res_konvergenz[0]))
 res_hopsy = hopsy.add_box_constraints(problem, lower_bound=0, upper_bound=5)
 #%%
 # Aufgabe 4
+# Hiermit liest man die Daten ein
 model_path = os.path.join("C:/Users/carol/OneDrive/Desktop/Juelich", "e_coli_core.xml")
 #%%
 polytope = PolyRoundApi.sbml_to_polytope(model_path)
 problem_e_coli = hopsy.Problem(polytope.A, polytope.b)
 problem_e_coli = hopsy.round(problem_e_coli)
 #%%
+for i in range(len(polytope.A["BIOMASS_Ecoli_core_w_GAM"])):
+    if(polytope.A["BIOMASS_Ecoli_core_w_GAM"][i] < 0 or polytope.A["BIOMASS_Ecoli_core_w_GAM"][i] > 0):
+        print(i)
+    #%%
+print(polytope.A["BIOMASS_Ecoli_core_w_GAM"])
+#%%
 print(polytope.A.columns)
+#%%
+print(polytope.A)
+#%%
+print(polytope.A.iloc[24])
 #%%
 starting_point = hopsy.compute_chebyshev_center(problem_e_coli)
 chains_e_coli = [hopsy.MarkovChain(problem_e_coli, starting_point = starting_point) for i in range(4)]

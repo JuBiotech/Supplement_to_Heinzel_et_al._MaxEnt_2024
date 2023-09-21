@@ -78,7 +78,7 @@ def quad_integrand(beta):
     # Berechnen des Integrals unter Verwendung von lambda_function mit beta
     result, _ = quad(lambda v2: quad(lambda v1: lambda_function(v1, v2, beta), x_lower, x_upper)[0], x_lower, x_upper)
 
-    # result, _ = quad(lambda v1: lambda_function(v1, beta), lower_limit, upper_limit)
+    # normierender Faktor
     res, _ = quad(lambda v2: quad(lambda v1: np.exp(v1 * beta) * np.exp(v2 * beta), x_lower, x_upper)[0], x_lower, x_upper)
     res_final = result/res
     # Rückgabewert des Integranden

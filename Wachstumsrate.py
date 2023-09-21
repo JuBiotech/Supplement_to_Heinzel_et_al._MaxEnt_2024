@@ -52,10 +52,20 @@ for i in range(0, maximaler_wert + 1, 15):
     t.append(i)
 print(t)
 #%% 
+
+print(teillisten[0])
+#%%
+y_fit = []
+for i in t:
+    y_fit.append(5 * np.exp(0.00717829 * i))
 # Plot erstellen
 plt.plot(t, teillisten[0], marker='o')  # Linie mit Punkten
+plt.plot(t, y_fit)
+plt.show()
 #%%
 print(teillisten[0])
+#%%
+c = 5
 #%%
 def exponential_growth(t, r):
     return c * np.exp(r * t)
@@ -79,6 +89,7 @@ for i in teillisten:
 print(np.mean(r_estimated)) # 0.00045140650004922713
 #%%
 print(t)
+#%%
 a = [5, 5, 5, 5, 6, 7, 7, 7, 7, 9, 13, 15, 15, 16, 17, 20, 21, 26, 29, 32, 33, 39, 44, 51, 54, 60, 72, 79, 88, 99, 109, 127, 149, 164, 183, 209, 240, 282, 317, 355]
-params, covariance = curve_fit(exponential_growth, t, N, maxfev = 10000)
+params, covariance = curve_fit(exponential_growth, t, a, maxfev = 10000)
 print(params)

@@ -1,6 +1,5 @@
 # Finden von A und b, wenn nur S bekannt
 import numpy as np
-
 #%%
 # 1. S eingeben
 S = np.zeros((5,3))

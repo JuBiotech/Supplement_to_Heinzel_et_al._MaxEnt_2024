@@ -100,6 +100,9 @@ accrate_e_coli, samples_e_coli = hopsy.sample(chains_e_coli, rng, n_samples=1000
 
 # Die Wachstumsrate ist in der 25. Spalte
 samples = samples_e_coli[:,:,24][0]
+print(samples.shape)
+# Histogramm anzeigen lassen
+#%%
 res_samples = []
 # teile die Werte durch 100: funktioniert durch Einheiten-Wechsel
 # Ziel: Python kann die Werte wieder ausrechnen
@@ -149,8 +152,8 @@ class Boltzman_Modell:
     def __init__(self, a):
         self.a = a
     def compute_negative_log_likelihood(self, x):
-        a = self.a * np.ones(len(x))
-        return - (np.dot(a, x))
+        #a = self.a * np.ones(len(x))
+        return - self.a *x[24] #(np.dot(a, x))
 a = np.array(result)
 model_Boltzmann = Boltzman_Modell(a)
 #%%
