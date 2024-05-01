@@ -8595,7 +8595,6 @@
       <reaction id="R_CIT_t_H" name="CIT_t_H" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
         <notes>
           <html xmlns="http://www.w3.org/1999/xhtml">
-            <p>GENE_ASSOCIATION: CIT_H</p>
             <p>SUBSYSTEM: Transport Extracellular</p>
           </html>
         </notes>
@@ -8607,9 +8606,6 @@
           <speciesReference species="M_h_c" stoichiometry="1" constant="true"/>
           <speciesReference species="M_cit_c" stoichiometry="1" constant="true"/>
         </listOfProducts>
-        <fbc:geneProductAssociation>
-          <fbc:geneProductRef fbc:geneProduct="G_CIT_H"/>
-        </fbc:geneProductAssociation>
       </reaction>
       <reaction id="R_LEU_t_NA" name="LEU_t_NA" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <notes>
@@ -12973,8 +12969,8 @@
       <fbc:geneProduct fbc:id="G_pckG" fbc:name="pckG" fbc:label="G_pckG"/>
       <fbc:geneProduct fbc:id="G_ppc" fbc:name="ppc" fbc:label="G_ppc"/>
       <fbc:geneProduct fbc:id="G_pyc" fbc:name="pyc" fbc:label="G_pyc"/>
-      <fbc:geneProduct fbc:id="G_b0126" fbc:name="b0126" fbc:label="G_b0126"/>
       <fbc:geneProduct fbc:id="G_b0339" fbc:name="b0339" fbc:label="G_b0339"/>
+      <fbc:geneProduct fbc:id="G_b0126" fbc:name="b0126" fbc:label="G_b0126"/>
       <fbc:geneProduct fbc:id="G_zwf" fbc:name="zwf" fbc:label="G_zwf"/>
       <fbc:geneProduct fbc:id="G_opcA" fbc:name="opcA" fbc:label="G_opcA"/>
       <fbc:geneProduct fbc:id="G_gnd" fbc:name="gnd" fbc:label="G_gnd"/>
@@ -12985,15 +12981,15 @@
       <fbc:geneProduct fbc:id="G_tkt_2" fbc:name="tkt_2" fbc:label="G_tkt_2"/>
       <fbc:geneProduct fbc:id="G_cydA" fbc:name="cydA" fbc:label="G_cydA"/>
       <fbc:geneProduct fbc:id="G_cydB" fbc:name="cydB" fbc:label="G_cydB"/>
-      <fbc:geneProduct fbc:id="G_atpH" fbc:name="atpH" fbc:label="G_atpH"/>
-      <fbc:geneProduct fbc:id="G_atpA" fbc:name="atpA" fbc:label="G_atpA"/>
-      <fbc:geneProduct fbc:id="G_atpE" fbc:name="atpE" fbc:label="G_atpE"/>
-      <fbc:geneProduct fbc:id="G_atpF" fbc:name="atpF" fbc:label="G_atpF"/>
       <fbc:geneProduct fbc:id="G_atpC" fbc:name="atpC" fbc:label="G_atpC"/>
-      <fbc:geneProduct fbc:id="G_atpG" fbc:name="atpG" fbc:label="G_atpG"/>
+      <fbc:geneProduct fbc:id="G_atpB" fbc:name="atpB" fbc:label="G_atpB"/>
+      <fbc:geneProduct fbc:id="G_atpA" fbc:name="atpA" fbc:label="G_atpA"/>
+      <fbc:geneProduct fbc:id="G_atpH" fbc:name="atpH" fbc:label="G_atpH"/>
       <fbc:geneProduct fbc:id="G_atpI" fbc:name="atpI" fbc:label="G_atpI"/>
       <fbc:geneProduct fbc:id="G_atpD" fbc:name="atpD" fbc:label="G_atpD"/>
-      <fbc:geneProduct fbc:id="G_atpB" fbc:name="atpB" fbc:label="G_atpB"/>
+      <fbc:geneProduct fbc:id="G_atpE" fbc:name="atpE" fbc:label="G_atpE"/>
+      <fbc:geneProduct fbc:id="G_atpG" fbc:name="atpG" fbc:label="G_atpG"/>
+      <fbc:geneProduct fbc:id="G_atpF" fbc:name="atpF" fbc:label="G_atpF"/>
       <fbc:geneProduct fbc:id="G_ndh" fbc:name="ndh" fbc:label="G_ndh"/>
       <fbc:geneProduct fbc:id="G_trxB" fbc:name="trxB" fbc:label="G_trxB"/>
       <fbc:geneProduct fbc:id="G_cysI" fbc:name="cysI" fbc:label="G_cysI"/>
@@ -13002,10 +12998,10 @@
       <fbc:geneProduct fbc:id="G_lldD" fbc:name="lldD" fbc:label="G_lldD"/>
       <fbc:geneProduct fbc:id="G_glpD" fbc:name="glpD" fbc:label="G_glpD"/>
       <fbc:geneProduct fbc:id="G_putA" fbc:name="putA" fbc:label="G_putA"/>
-      <fbc:geneProduct fbc:id="G_narG" fbc:name="narG" fbc:label="G_narG"/>
-      <fbc:geneProduct fbc:id="G_narI" fbc:name="narI" fbc:label="G_narI"/>
       <fbc:geneProduct fbc:id="G_narH" fbc:name="narH" fbc:label="G_narH"/>
       <fbc:geneProduct fbc:id="G_narJ" fbc:name="narJ" fbc:label="G_narJ"/>
+      <fbc:geneProduct fbc:id="G_narI" fbc:name="narI" fbc:label="G_narI"/>
+      <fbc:geneProduct fbc:id="G_narG" fbc:name="narG" fbc:label="G_narG"/>
       <fbc:geneProduct fbc:id="G_accDA" fbc:name="accDA" fbc:label="G_accDA"/>
       <fbc:geneProduct fbc:id="G_fas__45__IA_1" fbc:name="fas-IA_1" fbc:label="G_fas__45__IA_1"/>
       <fbc:geneProduct fbc:id="G_fas__45__IB_1" fbc:name="fas-IB_1" fbc:label="G_fas__45__IB_1"/>
@@ -13135,8 +13131,8 @@
       <fbc:geneProduct fbc:id="G_tyrA" fbc:name="tyrA" fbc:label="G_tyrA"/>
       <fbc:geneProduct fbc:id="G_r2_6_1_57" fbc:name="r2_6_1_57" fbc:label="G_r2_6_1_57"/>
       <fbc:geneProduct fbc:id="G_trpB" fbc:name="trpB" fbc:label="G_trpB"/>
-      <fbc:geneProduct fbc:id="G_trpG" fbc:name="trpG" fbc:label="G_trpG"/>
       <fbc:geneProduct fbc:id="G_trpE" fbc:name="trpE" fbc:label="G_trpE"/>
+      <fbc:geneProduct fbc:id="G_trpG" fbc:name="trpG" fbc:label="G_trpG"/>
       <fbc:geneProduct fbc:id="G_trpD" fbc:name="trpD" fbc:label="G_trpD"/>
       <fbc:geneProduct fbc:id="G_trpC" fbc:name="trpC" fbc:label="G_trpC"/>
       <fbc:geneProduct fbc:id="G_trpA" fbc:name="trpA" fbc:label="G_trpA"/>
@@ -13240,7 +13236,6 @@
       <fbc:geneProduct fbc:id="G_ALA_S" fbc:name="ALA_S" fbc:label="G_ALA_S"/>
       <fbc:geneProduct fbc:id="G_VAL_S" fbc:name="VAL_S" fbc:label="G_VAL_S"/>
       <fbc:geneProduct fbc:id="G_LysE" fbc:name="LysE" fbc:label="G_LysE"/>
-      <fbc:geneProduct fbc:id="G_CIT_H" fbc:name="CIT_H" fbc:label="G_CIT_H"/>
       <fbc:geneProduct fbc:id="G_LEU_S" fbc:name="LEU_S" fbc:label="G_LEU_S"/>
       <fbc:geneProduct fbc:id="G_aroP2_ATP" fbc:name="aroP2_ATP" fbc:label="G_aroP2_ATP"/>
       <fbc:geneProduct fbc:id="G_aroP1_ATP" fbc:name="aroP1_ATP" fbc:label="G_aroP1_ATP"/>
@@ -13268,12 +13263,12 @@
       <fbc:geneProduct fbc:id="G_Odx" fbc:name="Odx" fbc:label="G_Odx"/>
       <fbc:geneProduct fbc:id="G_dld2" fbc:name="dld2" fbc:label="G_dld2"/>
       <fbc:geneProduct fbc:id="G_ctaD" fbc:name="ctaD" fbc:label="G_ctaD"/>
-      <fbc:geneProduct fbc:id="G_ctaC" fbc:name="ctaC" fbc:label="G_ctaC"/>
-      <fbc:geneProduct fbc:id="G_qcrC" fbc:name="qcrC" fbc:label="G_qcrC"/>
       <fbc:geneProduct fbc:id="G_ctaE" fbc:name="ctaE" fbc:label="G_ctaE"/>
       <fbc:geneProduct fbc:id="G_ctaF" fbc:name="ctaF" fbc:label="G_ctaF"/>
-      <fbc:geneProduct fbc:id="G_qcrA" fbc:name="qcrA" fbc:label="G_qcrA"/>
       <fbc:geneProduct fbc:id="G_qcrB" fbc:name="qcrB" fbc:label="G_qcrB"/>
+      <fbc:geneProduct fbc:id="G_qcrC" fbc:name="qcrC" fbc:label="G_qcrC"/>
+      <fbc:geneProduct fbc:id="G_ctaC" fbc:name="ctaC" fbc:label="G_ctaC"/>
+      <fbc:geneProduct fbc:id="G_qcrA" fbc:name="qcrA" fbc:label="G_qcrA"/>
       <fbc:geneProduct fbc:id="G_katA" fbc:name="katA" fbc:label="G_katA"/>
       <fbc:geneProduct fbc:id="G_putA1" fbc:name="putA1" fbc:label="G_putA1"/>
       <fbc:geneProduct fbc:id="G_aspA" fbc:name="aspA" fbc:label="G_aspA"/>
@@ -13403,8 +13398,8 @@
       <fbc:geneProduct fbc:id="G_CYS_in_out" fbc:name="CYS_in_out" fbc:label="G_CYS_in_out"/>
       <fbc:geneProduct fbc:id="G_HIS_in_out" fbc:name="HIS_in_out" fbc:label="G_HIS_in_out"/>
       <fbc:geneProduct fbc:id="G_PPI_in_out" fbc:name="PPI_in_out" fbc:label="G_PPI_in_out"/>
-      <fbc:geneProduct fbc:id="G_PYR_transp" fbc:name="PYR_transp" fbc:label="G_PYR_transp"/>
       <fbc:geneProduct fbc:id="G_t" fbc:name="t" fbc:label="G_t"/>
+      <fbc:geneProduct fbc:id="G_PYR_transp" fbc:name="PYR_transp" fbc:label="G_PYR_transp"/>
       <fbc:geneProduct fbc:id="G_FRU_out" fbc:name="FRU_out" fbc:label="G_FRU_out"/>
       <fbc:geneProduct fbc:id="G_ACGAM_in" fbc:name="ACGAM_in" fbc:label="G_ACGAM_in"/>
       <fbc:geneProduct fbc:id="G_FE2abc" fbc:name="FE2abc" fbc:label="G_FE2abc"/>
@@ -13419,16 +13414,16 @@
       <fbc:geneProduct fbc:id="G_metB_2" fbc:name="metB_2" fbc:label="G_metB_2"/>
       <fbc:geneProduct fbc:id="G_aecD_2" fbc:name="aecD_2" fbc:label="G_aecD_2"/>
       <fbc:geneProduct fbc:id="G_pcaK" fbc:name="pcaK" fbc:label="G_pcaK"/>
-      <fbc:geneProduct fbc:id="G_pcaG" fbc:name="pcaG" fbc:label="G_pcaG"/>
       <fbc:geneProduct fbc:id="G_pca__32__H" fbc:name="pca H" fbc:label="G_pca__32__H"/>
+      <fbc:geneProduct fbc:id="G_pcaG" fbc:name="pcaG" fbc:label="G_pcaG"/>
       <fbc:geneProduct fbc:id="G_pcaB" fbc:name="pcaB" fbc:label="G_pcaB"/>
       <fbc:geneProduct fbc:id="G_pcaC" fbc:name="pcaC" fbc:label="G_pcaC"/>
       <fbc:geneProduct fbc:id="G_pcaL" fbc:name="pcaL" fbc:label="G_pcaL"/>
       <fbc:geneProduct fbc:id="G_pcaI" fbc:name="pcaI" fbc:label="G_pcaI"/>
       <fbc:geneProduct fbc:id="G_pcaJ" fbc:name="pcaJ" fbc:label="G_pcaJ"/>
       <fbc:geneProduct fbc:id="G_pcaF" fbc:name="pcaF" fbc:label="G_pcaF"/>
-      <fbc:geneProduct fbc:id="G_quiA" fbc:name="quiA" fbc:label="G_quiA"/>
       <fbc:geneProduct fbc:id="G_quiC" fbc:name="quiC" fbc:label="G_quiC"/>
+      <fbc:geneProduct fbc:id="G_quiA" fbc:name="quiA" fbc:label="G_quiA"/>
       <fbc:geneProduct fbc:id="G_Na__45__transporter" fbc:name="G_Na__45__transporter" fbc:label="G_Na__45__transporter"/>
       <fbc:geneProduct fbc:id="G_Formate_in_out" fbc:name="G_Formate_in_out" fbc:label="G_Formate_in_out"/>
       <fbc:geneProduct fbc:id="G_PYR_transport" fbc:name="G_PYR_transport" fbc:label="G_PYR_transport"/>
@@ -13436,69 +13431,69 @@
     <groups:listOfGroups>
       <groups:group metaid="meta_G_GlycolysisGluconeogenesis" sboTerm="SBO:0000633" groups:id="G_GlycolysisGluconeogenesis" groups:name="GlycolysisGluconeogenesis" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="glk" groups:idRef="R_glk"/>
-          <groups:member groups:name="pps" groups:idRef="R_pps"/>
-          <groups:member groups:name="pgi" groups:idRef="R_pgi"/>
-          <groups:member groups:name="gapA" groups:idRef="R_gapA"/>
           <groups:member groups:name="pfkA" groups:idRef="R_pfkA"/>
-          <groups:member groups:name="pgk" groups:idRef="R_pgk"/>
           <groups:member groups:name="fbp" groups:idRef="R_fbp"/>
-          <groups:member groups:name="eno" groups:idRef="R_eno"/>
-          <groups:member groups:name="tpiA" groups:idRef="R_tpiA"/>
-          <groups:member groups:name="pdh" groups:idRef="R_pdh"/>
+          <groups:member groups:name="gapA" groups:idRef="R_gapA"/>
           <groups:member groups:name="fda" groups:idRef="R_fda"/>
           <groups:member groups:name="gapB" groups:idRef="R_gapB"/>
-          <groups:member groups:name="pgm" groups:idRef="R_pgm"/>
+          <groups:member groups:name="pgk" groups:idRef="R_pgk"/>
+          <groups:member groups:name="eno" groups:idRef="R_eno"/>
+          <groups:member groups:name="tpiA" groups:idRef="R_tpiA"/>
           <groups:member groups:name="pyk" groups:idRef="R_pyk"/>
+          <groups:member groups:name="pps" groups:idRef="R_pps"/>
+          <groups:member groups:name="pdh" groups:idRef="R_pdh"/>
+          <groups:member groups:name="glk" groups:idRef="R_glk"/>
+          <groups:member groups:name="pgi" groups:idRef="R_pgi"/>
+          <groups:member groups:name="pgm" groups:idRef="R_pgm"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Oxidative__32__Phosphorylation" sboTerm="SBO:0000633" groups:id="G_Oxidative__32__Phosphorylation" groups:name="Oxidative Phosphorylation" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="bc1-aa3-complex" groups:idRef="R_bc1_aa3_complex"/>
-          <groups:member groups:name="lldD" groups:idRef="R_lldD"/>
-          <groups:member groups:name="combineComplexes" groups:idRef="R_combineComplexes"/>
-          <groups:member groups:name="pqo" groups:idRef="R_pqo"/>
-          <groups:member groups:name="cyto-bd-complex" groups:idRef="R_cyto_bd_complex"/>
-          <groups:member groups:name="glpD" groups:idRef="R_glpD"/>
-          <groups:member groups:name="dld2" groups:idRef="R_dld2"/>
           <groups:member groups:name="ldh" groups:idRef="R_ldh"/>
-          <groups:member groups:name="narGHIJ" groups:idRef="R_narGHIJ"/>
-          <groups:member groups:name="katA" groups:idRef="R_katA"/>
+          <groups:member groups:name="pqo" groups:idRef="R_pqo"/>
           <groups:member groups:name="trxB" groups:idRef="R_trxB"/>
-          <groups:member groups:name="ATPase" groups:idRef="R_ATPase"/>
+          <groups:member groups:name="bc1-aa3-complex" groups:idRef="R_bc1_aa3_complex"/>
+          <groups:member groups:name="glpD" groups:idRef="R_glpD"/>
+          <groups:member groups:name="cyto-bd-complex" groups:idRef="R_cyto_bd_complex"/>
+          <groups:member groups:name="narGHIJ" groups:idRef="R_narGHIJ"/>
+          <groups:member groups:name="combineComplexes" groups:idRef="R_combineComplexes"/>
+          <groups:member groups:name="dld2" groups:idRef="R_dld2"/>
           <groups:member groups:name="ndh" groups:idRef="R_ndh"/>
+          <groups:member groups:name="katA" groups:idRef="R_katA"/>
+          <groups:member groups:name="lldD" groups:idRef="R_lldD"/>
+          <groups:member groups:name="ATPase" groups:idRef="R_ATPase"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Anaplerotic__32__reactions" sboTerm="SBO:0000633" groups:id="G_Anaplerotic__32__reactions" groups:name="Anaplerotic reactions" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="dppt" groups:idRef="R_dppt"/>
-          <groups:member groups:name="pckG" groups:idRef="R_pckG"/>
-          <groups:member groups:name="pyc" groups:idRef="R_pyc"/>
           <groups:member groups:name="aceA" groups:idRef="R_aceA"/>
+          <groups:member groups:name="pckG" groups:idRef="R_pckG"/>
+          <groups:member groups:name="dppt" groups:idRef="R_dppt"/>
+          <groups:member groups:name="pyc" groups:idRef="R_pyc"/>
           <groups:member groups:name="mez" groups:idRef="R_mez"/>
-          <groups:member groups:name="ppc" groups:idRef="R_ppc"/>
           <groups:member groups:name="aceB" groups:idRef="R_aceB"/>
+          <groups:member groups:name="ppc" groups:idRef="R_ppc"/>
           <groups:member groups:name="odx" groups:idRef="R_odx"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Pyruvate__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Pyruvate__32__Metabolism" groups:name="Pyruvate Metabolism" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="ackA" groups:idRef="R_ackA"/>
           <groups:member groups:name="fdhF" groups:idRef="R_fdhF"/>
+          <groups:member groups:name="ackA" groups:idRef="R_ackA"/>
           <groups:member groups:name="pta" groups:idRef="R_pta"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Citric__32__Acid__32__Cycle" sboTerm="SBO:0000633" groups:id="G_Citric__32__Acid__32__Cycle" groups:name="Citric Acid Cycle" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="gltA" groups:idRef="R_gltA"/>
+          <groups:member groups:name="fumC" groups:idRef="R_fumC"/>
+          <groups:member groups:name="mqo" groups:idRef="R_mqo"/>
           <groups:member groups:name="acnB" groups:idRef="R_acnB"/>
           <groups:member groups:name="odhA" groups:idRef="R_odhA"/>
-          <groups:member groups:name="mqo" groups:idRef="R_mqo"/>
           <groups:member groups:name="sdhCAB" groups:idRef="R_sdhCAB"/>
-          <groups:member groups:name="fumC" groups:idRef="R_fumC"/>
+          <groups:member groups:name="gltA" groups:idRef="R_gltA"/>
+          <groups:member groups:name="mdh" groups:idRef="R_mdh"/>
           <groups:member groups:name="acnA" groups:idRef="R_acnA"/>
           <groups:member groups:name="icd" groups:idRef="R_icd"/>
-          <groups:member groups:name="mdh" groups:idRef="R_mdh"/>
           <groups:member groups:name="sucD" groups:idRef="R_sucD"/>
         </groups:listOfMembers>
       </groups:group>
@@ -13523,135 +13518,134 @@
       <groups:group metaid="meta_G_Cysteine__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Cysteine__32__Metabolism" groups:name="Cysteine Metabolism" groups:kind="partonomy">
         <groups:listOfMembers>
           <groups:member groups:name="cysH_1" groups:idRef="R_cysH_1"/>
-          <groups:member groups:name="cysE" groups:idRef="R_cysE"/>
           <groups:member groups:name="cysH_2" groups:idRef="R_cysH_2"/>
+          <groups:member groups:name="cysE" groups:idRef="R_cysE"/>
           <groups:member groups:name="ureA" groups:idRef="R_ureA"/>
+          <groups:member groups:name="cysKM" groups:idRef="R_cysKM"/>
           <groups:member groups:name="cysND" groups:idRef="R_cysND"/>
+          <groups:member groups:name="cysI" groups:idRef="R_cysI"/>
           <groups:member groups:name="cysC" groups:idRef="R_cysC"/>
           <groups:member groups:name="unk_34" groups:idRef="R_unk_34"/>
-          <groups:member groups:name="cysI" groups:idRef="R_cysI"/>
-          <groups:member groups:name="cysKM" groups:idRef="R_cysKM"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Cofactor__32__and__32__Prosthetic__32__Group__32__Biosynthesis" sboTerm="SBO:0000633" groups:id="G_Cofactor__32__and__32__Prosthetic__32__Group__32__Biosynthesis" groups:name="Cofactor and Prosthetic Group Biosynthesis" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="PPNCL2" groups:idRef="R_PPNCL2"/>
-          <groups:member groups:name="menD" groups:idRef="R_menD"/>
-          <groups:member groups:name="hemD" groups:idRef="R_hemD"/>
-          <groups:member groups:name="folA" groups:idRef="R_folA"/>
-          <groups:member groups:name="rib_3" groups:idRef="R_rib_3"/>
-          <groups:member groups:name="panC" groups:idRef="R_panC"/>
-          <groups:member groups:name="r6_3_5_1" groups:idRef="R_r6_3_5_1"/>
-          <groups:member groups:name="PPCDC" groups:idRef="R_PPCDC"/>
-          <groups:member groups:name="menC" groups:idRef="R_menC"/>
-          <groups:member groups:name="hemE" groups:idRef="R_hemE"/>
-          <groups:member groups:name="rib_4" groups:idRef="R_rib_4"/>
-          <groups:member groups:name="ribA" groups:idRef="R_ribA"/>
           <groups:member groups:name="r2_7_7_18" groups:idRef="R_r2_7_7_18"/>
-          <groups:member groups:name="coaE" groups:idRef="R_coaE"/>
+          <groups:member groups:name="folC" groups:idRef="R_folC"/>
+          <groups:member groups:name="rib_4" groups:idRef="R_rib_4"/>
           <groups:member groups:name="menE" groups:idRef="R_menE"/>
-          <groups:member groups:name="hemN" groups:idRef="R_hemN"/>
+          <groups:member groups:name="coaE" groups:idRef="R_coaE"/>
+          <groups:member groups:name="ribA" groups:idRef="R_ribA"/>
           <groups:member groups:name="NCgl0233_NCgl1244" groups:idRef="R_NCgl0233_NCgl1244"/>
+          <groups:member groups:name="menC" groups:idRef="R_menC"/>
           <groups:member groups:name="r6_3_5_8" groups:idRef="R_r6_3_5_8"/>
           <groups:member groups:name="ribF" groups:idRef="R_ribF"/>
-          <groups:member groups:name="ribG" groups:idRef="R_ribG"/>
-          <groups:member groups:name="acpS" groups:idRef="R_acpS"/>
-          <groups:member groups:name="r3_5_1_19" groups:idRef="R_r3_5_1_19"/>
-          <groups:member groups:name="coaD" groups:idRef="R_coaD"/>
           <groups:member groups:name="menB" groups:idRef="R_menB"/>
-          <groups:member groups:name="hemG" groups:idRef="R_hemG"/>
+          <groups:member groups:name="ribG" groups:idRef="R_ribG"/>
+          <groups:member groups:name="hemE" groups:idRef="R_hemE"/>
           <groups:member groups:name="hemA" groups:idRef="R_hemA"/>
+          <groups:member groups:name="coaD" groups:idRef="R_coaD"/>
+          <groups:member groups:name="panE" groups:idRef="R_panE"/>
           <groups:member groups:name="r4_1_3_58" groups:idRef="R_r4_1_3_58"/>
           <groups:member groups:name="folE" groups:idRef="R_folE"/>
           <groups:member groups:name="NCgl1535" groups:idRef="R_NCgl1535"/>
-          <groups:member groups:name="r2_4_2_11" groups:idRef="R_r2_4_2_11"/>
-          <groups:member groups:name="menA" groups:idRef="R_menA"/>
-          <groups:member groups:name="hemH" groups:idRef="R_hemH"/>
           <groups:member groups:name="hemL" groups:idRef="R_hemL"/>
+          <groups:member groups:name="r2_4_2_11" groups:idRef="R_r2_4_2_11"/>
+          <groups:member groups:name="panB" groups:idRef="R_panB"/>
+          <groups:member groups:name="menA" groups:idRef="R_menA"/>
+          <groups:member groups:name="hemN" groups:idRef="R_hemN"/>
+          <groups:member groups:name="bioD" groups:idRef="R_bioD"/>
           <groups:member groups:name="sulI" groups:idRef="R_sulI"/>
           <groups:member groups:name="phoB" groups:idRef="R_phoB"/>
-          <groups:member groups:name="rib_1" groups:idRef="R_rib_1"/>
-          <groups:member groups:name="panB" groups:idRef="R_panB"/>
-          <groups:member groups:name="bioD" groups:idRef="R_bioD"/>
+          <groups:member groups:name="r6_3_5_1" groups:idRef="R_r6_3_5_1"/>
           <groups:member groups:name="menG" groups:idRef="R_menG"/>
-          <groups:member groups:name="ctaB" groups:idRef="R_ctaB"/>
+          <groups:member groups:name="rib_1" groups:idRef="R_rib_1"/>
           <groups:member groups:name="hemB" groups:idRef="R_hemB"/>
+          <groups:member groups:name="ctaB" groups:idRef="R_ctaB"/>
+          <groups:member groups:name="PPCDC" groups:idRef="R_PPCDC"/>
+          <groups:member groups:name="bioB" groups:idRef="R_bioB"/>
+          <groups:member groups:name="ppnK" groups:idRef="R_ppnK"/>
           <groups:member groups:name="folX" groups:idRef="R_folX"/>
           <groups:member groups:name="ribH" groups:idRef="R_ribH"/>
-          <groups:member groups:name="bioB" groups:idRef="R_bioB"/>
-          <groups:member groups:name="panE" groups:idRef="R_panE"/>
+          <groups:member groups:name="hemC" groups:idRef="R_hemC"/>
           <groups:member groups:name="coaA" groups:idRef="R_coaA"/>
           <groups:member groups:name="menF" groups:idRef="R_menF"/>
-          <groups:member groups:name="hemC" groups:idRef="R_hemC"/>
-          <groups:member groups:name="ppnK" groups:idRef="R_ppnK"/>
-          <groups:member groups:name="folC" groups:idRef="R_folC"/>
           <groups:member groups:name="folK" groups:idRef="R_folK"/>
-          <groups:member groups:name="rib_2" groups:idRef="R_rib_2"/>
-          <groups:member groups:name="panD" groups:idRef="R_panD"/>
           <groups:member groups:name="nadE" groups:idRef="R_nadE"/>
+          <groups:member groups:name="rib_2" groups:idRef="R_rib_2"/>
+          <groups:member groups:name="PPNCL2" groups:idRef="R_PPNCL2"/>
+          <groups:member groups:name="hemD" groups:idRef="R_hemD"/>
+          <groups:member groups:name="panD" groups:idRef="R_panD"/>
+          <groups:member groups:name="menD" groups:idRef="R_menD"/>
+          <groups:member groups:name="r3_5_1_19" groups:idRef="R_r3_5_1_19"/>
+          <groups:member groups:name="acpS" groups:idRef="R_acpS"/>
+          <groups:member groups:name="hemG" groups:idRef="R_hemG"/>
+          <groups:member groups:name="folA" groups:idRef="R_folA"/>
+          <groups:member groups:name="rib_3" groups:idRef="R_rib_3"/>
+          <groups:member groups:name="panC" groups:idRef="R_panC"/>
+          <groups:member groups:name="hemH" groups:idRef="R_hemH"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Arginine__32__and__32__Proline__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Arginine__32__and__32__Proline__32__Metabolism" groups:name="Arginine and Proline Metabolism" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="argR" groups:idRef="R_argR"/>
-          <groups:member groups:name="putA1" groups:idRef="R_putA1"/>
-          <groups:member groups:name="carA" groups:idRef="R_carA"/>
-          <groups:member groups:name="argG" groups:idRef="R_argG"/>
           <groups:member groups:name="argJ" groups:idRef="R_argJ"/>
-          <groups:member groups:name="argH" groups:idRef="R_argH"/>
           <groups:member groups:name="proB" groups:idRef="R_proB"/>
           <groups:member groups:name="argB" groups:idRef="R_argB"/>
           <groups:member groups:name="putA" groups:idRef="R_putA"/>
-          <groups:member groups:name="ocd" groups:idRef="R_ocd"/>
           <groups:member groups:name="proA" groups:idRef="R_proA"/>
-          <groups:member groups:name="r2_6_1_13" groups:idRef="R_r2_6_1_13"/>
           <groups:member groups:name="argC" groups:idRef="R_argC"/>
           <groups:member groups:name="proC" groups:idRef="R_proC"/>
           <groups:member groups:name="argD" groups:idRef="R_argD"/>
-          <groups:member groups:name="gabT" groups:idRef="R_gabT"/>
+          <groups:member groups:name="r2_6_1_13" groups:idRef="R_r2_6_1_13"/>
           <groups:member groups:name="rGLUGSAL" groups:idRef="R_rGLUGSAL"/>
           <groups:member groups:name="argF" groups:idRef="R_argF"/>
+          <groups:member groups:name="gabT" groups:idRef="R_gabT"/>
+          <groups:member groups:name="argH" groups:idRef="R_argH"/>
+          <groups:member groups:name="argR" groups:idRef="R_argR"/>
           <groups:member groups:name="gabD2" groups:idRef="R_gabD2"/>
+          <groups:member groups:name="putA1" groups:idRef="R_putA1"/>
+          <groups:member groups:name="ocd" groups:idRef="R_ocd"/>
+          <groups:member groups:name="argG" groups:idRef="R_argG"/>
+          <groups:member groups:name="carA" groups:idRef="R_carA"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Membrane__32__Lipid__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Membrane__32__Lipid__32__Metabolism" groups:name="Membrane Lipid Metabolism" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="r2_7_8_a" groups:idRef="R_r2_7_8_a"/>
-          <groups:member groups:name="FASC161" groups:idRef="R_FASC161"/>
-          <groups:member groups:name="fas-IB_1" groups:idRef="R_fas_IB_1"/>
-          <groups:member groups:name="r2_7_8_b" groups:idRef="R_r2_7_8_b"/>
-          <groups:member groups:name="ddl" groups:idRef="R_ddl"/>
-          <groups:member groups:name="FASC181" groups:idRef="R_FASC181"/>
-          <groups:member groups:name="r2_7_8_c" groups:idRef="R_r2_7_8_c"/>
-          <groups:member groups:name="murI" groups:idRef="R_murI"/>
           <groups:member groups:name="KAS14" groups:idRef="R_KAS14"/>
           <groups:member groups:name="cdsA" groups:idRef="R_cdsA"/>
-          <groups:member groups:name="pacs" groups:idRef="R_pacs"/>
+          <groups:member groups:name="murI" groups:idRef="R_murI"/>
           <groups:member groups:name="FASC140" groups:idRef="R_FASC140"/>
-          <groups:member groups:name="plsC" groups:idRef="R_plsC"/>
+          <groups:member groups:name="pacs" groups:idRef="R_pacs"/>
           <groups:member groups:name="FASC150" groups:idRef="R_FASC150"/>
-          <groups:member groups:name="pgsA2" groups:idRef="R_pgsA2"/>
           <groups:member groups:name="FASC160" groups:idRef="R_FASC160"/>
           <groups:member groups:name="accDA" groups:idRef="R_accDA"/>
-          <groups:member groups:name="cdsB" groups:idRef="R_cdsB"/>
           <groups:member groups:name="FASC180" groups:idRef="R_FASC180"/>
+          <groups:member groups:name="cdsB" groups:idRef="R_cdsB"/>
           <groups:member groups:name="fas-IA_1" groups:idRef="R_fas_IA_1"/>
+          <groups:member groups:name="r2_7_8_b" groups:idRef="R_r2_7_8_b"/>
+          <groups:member groups:name="FASC161" groups:idRef="R_FASC161"/>
+          <groups:member groups:name="r2_7_8_a" groups:idRef="R_r2_7_8_a"/>
+          <groups:member groups:name="fas-IB_1" groups:idRef="R_fas_IB_1"/>
+          <groups:member groups:name="r2_7_8_c" groups:idRef="R_r2_7_8_c"/>
+          <groups:member groups:name="pgsA2" groups:idRef="R_pgsA2"/>
+          <groups:member groups:name="FASC181" groups:idRef="R_FASC181"/>
+          <groups:member groups:name="plsC" groups:idRef="R_plsC"/>
+          <groups:member groups:name="ddl" groups:idRef="R_ddl"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Alternate__32__Carbon__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Alternate__32__Carbon__32__Metabolism" groups:name="Alternate Carbon Metabolism" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="dhaS_1" groups:idRef="R_dhaS_1"/>
-          <groups:member groups:name="galE" groups:idRef="R_galE"/>
+          <groups:member groups:name="glpK" groups:idRef="R_glpK"/>
+          <groups:member groups:name="glgC" groups:idRef="R_glgC"/>
           <groups:member groups:name="gntK" groups:idRef="R_gntK"/>
           <groups:member groups:name="nagA" groups:idRef="R_nagA"/>
-          <groups:member groups:name="glgC" groups:idRef="R_glgC"/>
-          <groups:member groups:name="gpsA" groups:idRef="R_gpsA"/>
           <groups:member groups:name="gam2gam6p" groups:idRef="R_gam2gam6p"/>
+          <groups:member groups:name="pmmB" groups:idRef="R_pmmB"/>
+          <groups:member groups:name="gpsA" groups:idRef="R_gpsA"/>
           <groups:member groups:name="prpDBC" groups:idRef="R_prpDBC"/>
           <groups:member groups:name="rbsK1" groups:idRef="R_rbsK1"/>
-          <groups:member groups:name="glpK" groups:idRef="R_glpK"/>
-          <groups:member groups:name="otsA" groups:idRef="R_otsA"/>
           <groups:member groups:name="glgP1" groups:idRef="R_glgP1"/>
+          <groups:member groups:name="glgA" groups:idRef="R_glgA"/>
           <groups:member groups:name="aradh" groups:idRef="R_aradh"/>
           <groups:member groups:name="scrB" groups:idRef="R_scrB"/>
           <groups:member groups:name="xylB" groups:idRef="R_xylB"/>
@@ -13661,33 +13655,30 @@
           <groups:member groups:name="ACC_glycogen_c" groups:idRef="R_ACC_glycogen_c"/>
           <groups:member groups:name="adhA" groups:idRef="R_adhA"/>
           <groups:member groups:name="pmmA" groups:idRef="R_pmmA"/>
-          <groups:member groups:name="glgA" groups:idRef="R_glgA"/>
-          <groups:member groups:name="otsB" groups:idRef="R_otsB"/>
-          <groups:member groups:name="pmmB" groups:idRef="R_pmmB"/>
           <groups:member groups:name="nagB" groups:idRef="R_nagB"/>
+          <groups:member groups:name="otsB" groups:idRef="R_otsB"/>
           <groups:member groups:name="r2_7_1_6" groups:idRef="R_r2_7_1_6"/>
+          <groups:member groups:name="dhaS_1" groups:idRef="R_dhaS_1"/>
+          <groups:member groups:name="otsA" groups:idRef="R_otsA"/>
+          <groups:member groups:name="galE" groups:idRef="R_galE"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Histidine__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Histidine__32__Metabolism" groups:name="Histidine Metabolism" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="hisB" groups:idRef="R_hisB"/>
-          <groups:member groups:name="hisN" groups:idRef="R_hisN"/>
-          <groups:member groups:name="hisG" groups:idRef="R_hisG"/>
-          <groups:member groups:name="hisE" groups:idRef="R_hisE"/>
-          <groups:member groups:name="hisFH" groups:idRef="R_hisFH"/>
           <groups:member groups:name="hisC" groups:idRef="R_hisC"/>
-          <groups:member groups:name="prsA" groups:idRef="R_prsA"/>
           <groups:member groups:name="hisD" groups:idRef="R_hisD"/>
           <groups:member groups:name="hisI" groups:idRef="R_hisI"/>
           <groups:member groups:name="hisA" groups:idRef="R_hisA"/>
+          <groups:member groups:name="hisB" groups:idRef="R_hisB"/>
+          <groups:member groups:name="hisN" groups:idRef="R_hisN"/>
+          <groups:member groups:name="hisG" groups:idRef="R_hisG"/>
+          <groups:member groups:name="prsA" groups:idRef="R_prsA"/>
+          <groups:member groups:name="hisE" groups:idRef="R_hisE"/>
+          <groups:member groups:name="hisFH" groups:idRef="R_hisFH"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Purine__32__and__32__Pyrimidine__32__Biosynthesis" sboTerm="SBO:0000633" groups:id="G_Purine__32__and__32__Pyrimidine__32__Biosynthesis" groups:name="Purine and Pyrimidine Biosynthesis" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="purC" groups:idRef="R_purC"/>
-          <groups:member groups:name="purK" groups:idRef="R_purK"/>
-          <groups:member groups:name="purB_1" groups:idRef="R_purB_1"/>
-          <groups:member groups:name="pyrF" groups:idRef="R_pyrF"/>
           <groups:member groups:name="purH_1" groups:idRef="R_purH_1"/>
           <groups:member groups:name="purF" groups:idRef="R_purF"/>
           <groups:member groups:name="pyrD" groups:idRef="R_pyrD"/>
@@ -13695,287 +13686,309 @@
           <groups:member groups:name="purD" groups:idRef="R_purD"/>
           <groups:member groups:name="pyrE_2" groups:idRef="R_pyrE_2"/>
           <groups:member groups:name="purA" groups:idRef="R_purA"/>
+          <groups:member groups:name="guaB1" groups:idRef="R_guaB1"/>
           <groups:member groups:name="purN" groups:idRef="R_purN"/>
           <groups:member groups:name="pyrC" groups:idRef="R_pyrC"/>
-          <groups:member groups:name="purE" groups:idRef="R_purE"/>
           <groups:member groups:name="pyrE_1" groups:idRef="R_pyrE_1"/>
-          <groups:member groups:name="purB_2" groups:idRef="R_purB_2"/>
+          <groups:member groups:name="purE" groups:idRef="R_purE"/>
           <groups:member groups:name="purLQS" groups:idRef="R_purLQS"/>
           <groups:member groups:name="pyrB" groups:idRef="R_pyrB"/>
           <groups:member groups:name="pyrG_2gln" groups:idRef="R_pyrG_2gln"/>
-          <groups:member groups:name="guaB1" groups:idRef="R_guaB1"/>
           <groups:member groups:name="purM" groups:idRef="R_purM"/>
           <groups:member groups:name="guaA" groups:idRef="R_guaA"/>
+          <groups:member groups:name="purC" groups:idRef="R_purC"/>
+          <groups:member groups:name="purK" groups:idRef="R_purK"/>
+          <groups:member groups:name="purB_2" groups:idRef="R_purB_2"/>
+          <groups:member groups:name="purB_1" groups:idRef="R_purB_1"/>
+          <groups:member groups:name="pyrF" groups:idRef="R_pyrF"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Nucleotide__32__Salvage__32__Pathway" sboTerm="SBO:0000633" groups:id="G_Nucleotide__32__Salvage__32__Pathway" groups:name="Nucleotide Salvage Pathway" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="nucA_7" groups:idRef="R_nucA_7"/>
-          <groups:member groups:name="nucA_3" groups:idRef="R_nucA_3"/>
-          <groups:member groups:name="r3_2_2_1_4" groups:idRef="R_r3_2_2_1_4"/>
-          <groups:member groups:name="r2_4_2_8_1" groups:idRef="R_r2_4_2_8_1"/>
-          <groups:member groups:name="gmk_2" groups:idRef="R_gmk_2"/>
-          <groups:member groups:name="pyrH" groups:idRef="R_pyrH"/>
-          <groups:member groups:name="ndk_2" groups:idRef="R_ndk_2"/>
-          <groups:member groups:name="r3_1_5_1" groups:idRef="R_r3_1_5_1"/>
-          <groups:member groups:name="nucA_4" groups:idRef="R_nucA_4"/>
-          <groups:member groups:name="r3_2_2_1_1" groups:idRef="R_r3_2_2_1_1"/>
-          <groups:member groups:name="nrdD_1" groups:idRef="R_nrdD_1"/>
-          <groups:member groups:name="pyrG_1" groups:idRef="R_pyrG_1"/>
-          <groups:member groups:name="gmk_1" groups:idRef="R_gmk_1"/>
-          <groups:member groups:name="nrdF_10" groups:idRef="R_nrdF_10"/>
-          <groups:member groups:name="nucA_9" groups:idRef="R_nucA_9"/>
-          <groups:member groups:name="ndk_5" groups:idRef="R_ndk_5"/>
-          <groups:member groups:name="r3_2_2_1_3" groups:idRef="R_r3_2_2_1_3"/>
+          <groups:member groups:name="thyX" groups:idRef="R_thyX"/>
           <groups:member groups:name="r3_2_2_1_2" groups:idRef="R_r3_2_2_1_2"/>
+          <groups:member groups:name="ndk_5" groups:idRef="R_ndk_5"/>
           <groups:member groups:name="nrdF_4" groups:idRef="R_nrdF_4"/>
-          <groups:member groups:name="nucA_1" groups:idRef="R_nucA_1"/>
           <groups:member groups:name="ndk_1" groups:idRef="R_ndk_1"/>
-          <groups:member groups:name="ndk_6" groups:idRef="R_ndk_6"/>
-          <groups:member groups:name="nucA_5" groups:idRef="R_nucA_5"/>
+          <groups:member groups:name="nucA_1" groups:idRef="R_nucA_1"/>
+          <groups:member groups:name="pyrG_1" groups:idRef="R_pyrG_1"/>
           <groups:member groups:name="r2_4_2_8_3" groups:idRef="R_r2_4_2_8_3"/>
-          <groups:member groups:name="ndk_12" groups:idRef="R_ndk_12"/>
-          <groups:member groups:name="dcd_1" groups:idRef="R_dcd_1"/>
           <groups:member groups:name="ndk_11" groups:idRef="R_ndk_11"/>
+          <groups:member groups:name="ndk_12" groups:idRef="R_ndk_12"/>
           <groups:member groups:name="ndk_3" groups:idRef="R_ndk_3"/>
-          <groups:member groups:name="nucA_8" groups:idRef="R_nucA_8"/>
-          <groups:member groups:name="cmk_3" groups:idRef="R_cmk_3"/>
-          <groups:member groups:name="nucA_6" groups:idRef="R_nucA_6"/>
+          <groups:member groups:name="nucA_3" groups:idRef="R_nucA_3"/>
+          <groups:member groups:name="dcd_1" groups:idRef="R_dcd_1"/>
           <groups:member groups:name="amn" groups:idRef="R_amn"/>
+          <groups:member groups:name="nrdD_1" groups:idRef="R_nrdD_1"/>
           <groups:member groups:name="tmk" groups:idRef="R_tmk"/>
+          <groups:member groups:name="nucA_8" groups:idRef="R_nucA_8"/>
           <groups:member groups:name="umk" groups:idRef="R_umk"/>
-          <groups:member groups:name="dut" groups:idRef="R_dut"/>
-          <groups:member groups:name="cmk_2" groups:idRef="R_cmk_2"/>
+          <groups:member groups:name="nucA_5" groups:idRef="R_nucA_5"/>
           <groups:member groups:name="r2_4_2_8_2" groups:idRef="R_r2_4_2_8_2"/>
-          <groups:member groups:name="nrdD_2" groups:idRef="R_nrdD_2"/>
+          <groups:member groups:name="r3_2_2_1_3" groups:idRef="R_r3_2_2_1_3"/>
           <groups:member groups:name="thyA" groups:idRef="R_thyA"/>
+          <groups:member groups:name="nucA_9" groups:idRef="R_nucA_9"/>
           <groups:member groups:name="adk_1" groups:idRef="R_adk_1"/>
           <groups:member groups:name="adk_2" groups:idRef="R_adk_2"/>
-          <groups:member groups:name="thyX" groups:idRef="R_thyX"/>
-          <groups:member groups:name="nucA_10" groups:idRef="R_nucA_10"/>
-          <groups:member groups:name="pyrR" groups:idRef="R_pyrR"/>
-          <groups:member groups:name="dcd_2" groups:idRef="R_dcd_2"/>
           <groups:member groups:name="nucA_11" groups:idRef="R_nucA_11"/>
           <groups:member groups:name="nucA_2" groups:idRef="R_nucA_2"/>
+          <groups:member groups:name="pyrR" groups:idRef="R_pyrR"/>
           <groups:member groups:name="ndk_10" groups:idRef="R_ndk_10"/>
+          <groups:member groups:name="dut" groups:idRef="R_dut"/>
+          <groups:member groups:name="nucA_10" groups:idRef="R_nucA_10"/>
+          <groups:member groups:name="nrdD_2" groups:idRef="R_nrdD_2"/>
+          <groups:member groups:name="cmk_3" groups:idRef="R_cmk_3"/>
+          <groups:member groups:name="r3_2_2_1_4" groups:idRef="R_r3_2_2_1_4"/>
+          <groups:member groups:name="nucA_7" groups:idRef="R_nucA_7"/>
+          <groups:member groups:name="r2_4_2_8_1" groups:idRef="R_r2_4_2_8_1"/>
+          <groups:member groups:name="pyrH" groups:idRef="R_pyrH"/>
+          <groups:member groups:name="ndk_6" groups:idRef="R_ndk_6"/>
+          <groups:member groups:name="nrdF_10" groups:idRef="R_nrdF_10"/>
+          <groups:member groups:name="ndk_2" groups:idRef="R_ndk_2"/>
+          <groups:member groups:name="gmk_2" groups:idRef="R_gmk_2"/>
+          <groups:member groups:name="cmk_2" groups:idRef="R_cmk_2"/>
+          <groups:member groups:name="nucA_4" groups:idRef="R_nucA_4"/>
+          <groups:member groups:name="r3_2_2_1_1" groups:idRef="R_r3_2_2_1_1"/>
+          <groups:member groups:name="nucA_6" groups:idRef="R_nucA_6"/>
+          <groups:member groups:name="dcd_2" groups:idRef="R_dcd_2"/>
+          <groups:member groups:name="r3_1_5_1" groups:idRef="R_r3_1_5_1"/>
+          <groups:member groups:name="gmk_1" groups:idRef="R_gmk_1"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Glutamate__32__metabolism" sboTerm="SBO:0000633" groups:id="G_Glutamate__32__metabolism" groups:name="Glutamate metabolism" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="gltBD" groups:idRef="R_gltBD"/>
           <groups:member groups:name="gdh" groups:idRef="R_gdh"/>
           <groups:member groups:name="glnA" groups:idRef="R_glnA"/>
+          <groups:member groups:name="gltBD" groups:idRef="R_gltBD"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Alanine__32__and__32__Aspartate__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Alanine__32__and__32__Aspartate__32__Metabolism" groups:name="Alanine and Aspartate Metabolism" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="alr" groups:idRef="R_alr"/>
-          <groups:member groups:name="ALA-D_deg" groups:idRef="R_ALA_D_deg"/>
-          <groups:member groups:name="aspn" groups:idRef="R_aspn"/>
-          <groups:member groups:name="ltsA" groups:idRef="R_ltsA"/>
-          <groups:member groups:name="NCgl0388" groups:idRef="R_NCgl0388"/>
-          <groups:member groups:name="ALA-B_deg" groups:idRef="R_ALA_B_deg"/>
-          <groups:member groups:name="aspA" groups:idRef="R_aspA"/>
           <groups:member groups:name="msmA" groups:idRef="R_msmA"/>
           <groups:member groups:name="aspB" groups:idRef="R_aspB"/>
           <groups:member groups:name="NCgl2116" groups:idRef="R_NCgl2116"/>
+          <groups:member groups:name="aspn" groups:idRef="R_aspn"/>
+          <groups:member groups:name="NCgl0388" groups:idRef="R_NCgl0388"/>
+          <groups:member groups:name="ALA-D_deg" groups:idRef="R_ALA_D_deg"/>
+          <groups:member groups:name="ltsA" groups:idRef="R_ltsA"/>
+          <groups:member groups:name="ALA-B_deg" groups:idRef="R_ALA_B_deg"/>
+          <groups:member groups:name="aspA" groups:idRef="R_aspA"/>
+          <groups:member groups:name="alr" groups:idRef="R_alr"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Valine__32__Leucine__32__and__32__Isoleucine__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Valine__32__Leucine__32__and__32__Isoleucine__32__Metabolism" groups:name="Valine Leucine and Isoleucine Metabolism" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="ilvE" groups:idRef="R_ilvE"/>
-          <groups:member groups:name="ilvBN_ile" groups:idRef="R_ilvBN_ile"/>
-          <groups:member groups:name="leuP" groups:idRef="R_leuP"/>
-          <groups:member groups:name="ilvE_ile" groups:idRef="R_ilvE_ile"/>
           <groups:member groups:name="ilvBN_val" groups:idRef="R_ilvBN_val"/>
           <groups:member groups:name="leuA" groups:idRef="R_leuA"/>
-          <groups:member groups:name="ilvD_val" groups:idRef="R_ilvD_val"/>
-          <groups:member groups:name="leuCD" groups:idRef="R_leuCD"/>
-          <groups:member groups:name="ilvA_ile" groups:idRef="R_ilvA_ile"/>
-          <groups:member groups:name="leuB" groups:idRef="R_leuB"/>
+          <groups:member groups:name="ilvBN_ile" groups:idRef="R_ilvBN_ile"/>
           <groups:member groups:name="ilvC_ile" groups:idRef="R_ilvC_ile"/>
+          <groups:member groups:name="leuCD" groups:idRef="R_leuCD"/>
+          <groups:member groups:name="ilvD_val" groups:idRef="R_ilvD_val"/>
+          <groups:member groups:name="ilvE_ile" groups:idRef="R_ilvE_ile"/>
+          <groups:member groups:name="leuB" groups:idRef="R_leuB"/>
           <groups:member groups:name="ilvE_val" groups:idRef="R_ilvE_val"/>
+          <groups:member groups:name="ilvD_ile" groups:idRef="R_ilvD_ile"/>
           <groups:member groups:name="ilvC_val" groups:idRef="R_ilvC_val"/>
           <groups:member groups:name="leuE" groups:idRef="R_leuE"/>
-          <groups:member groups:name="ilvD_ile" groups:idRef="R_ilvD_ile"/>
+          <groups:member groups:name="ilvE" groups:idRef="R_ilvE"/>
+          <groups:member groups:name="ilvA_ile" groups:idRef="R_ilvA_ile"/>
+          <groups:member groups:name="leuP" groups:idRef="R_leuP"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Threonine__32__and__32__Lysine__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Threonine__32__and__32__Lysine__32__Metabolism" groups:name="Threonine and Lysine Metabolism" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="asd" groups:idRef="R_asd"/>
           <groups:member groups:name="dapB" groups:idRef="R_dapB"/>
-          <groups:member groups:name="hom" groups:idRef="R_hom"/>
           <groups:member groups:name="dapC" groups:idRef="R_dapC"/>
-          <groups:member groups:name="thrB" groups:idRef="R_thrB"/>
           <groups:member groups:name="dapF" groups:idRef="R_dapF"/>
           <groups:member groups:name="lysC" groups:idRef="R_lysC"/>
           <groups:member groups:name="lysA" groups:idRef="R_lysA"/>
-          <groups:member groups:name="ddh" groups:idRef="R_ddh"/>
           <groups:member groups:name="dapA" groups:idRef="R_dapA"/>
+          <groups:member groups:name="thrC" groups:idRef="R_thrC"/>
+          <groups:member groups:name="hom" groups:idRef="R_hom"/>
           <groups:member groups:name="dapD" groups:idRef="R_dapD"/>
           <groups:member groups:name="dapE" groups:idRef="R_dapE"/>
-          <groups:member groups:name="thrC" groups:idRef="R_thrC"/>
+          <groups:member groups:name="ddh" groups:idRef="R_ddh"/>
+          <groups:member groups:name="asd" groups:idRef="R_asd"/>
+          <groups:member groups:name="thrB" groups:idRef="R_thrB"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Glycine__32__and__32__Serine__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Glycine__32__and__32__Serine__32__Metabolism" groups:name="Glycine and Serine Metabolism" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="serC" groups:idRef="R_serC"/>
+          <groups:member groups:name="glyA" groups:idRef="R_glyA"/>
           <groups:member groups:name="serB" groups:idRef="R_serB"/>
           <groups:member groups:name="sdaA" groups:idRef="R_sdaA"/>
-          <groups:member groups:name="glyA" groups:idRef="R_glyA"/>
           <groups:member groups:name="serA" groups:idRef="R_serA"/>
+          <groups:member groups:name="serC" groups:idRef="R_serC"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Tyrosine__32__Tryptophan__32__and__32__Phenylalanine__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Tyrosine__32__Tryptophan__32__and__32__Phenylalanine__32__Metabolism" groups:name="Tyrosine Tryptophan and Phenylalanine Metabolism" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="trpD" groups:idRef="R_trpD"/>
-          <groups:member groups:name="aroC" groups:idRef="R_aroC"/>
-          <groups:member groups:name="NCgl0215" groups:idRef="R_NCgl0215"/>
-          <groups:member groups:name="pheA" groups:idRef="R_pheA"/>
-          <groups:member groups:name="csm" groups:idRef="R_csm"/>
-          <groups:member groups:name="aroB" groups:idRef="R_aroB"/>
-          <groups:member groups:name="r2_6_1_57" groups:idRef="R_r2_6_1_57"/>
-          <groups:member groups:name="aroE" groups:idRef="R_aroE"/>
-          <groups:member groups:name="trpEG" groups:idRef="R_trpEG"/>
-          <groups:member groups:name="aroA" groups:idRef="R_aroA"/>
-          <groups:member groups:name="trpC" groups:idRef="R_trpC"/>
-          <groups:member groups:name="aroG" groups:idRef="R_aroG"/>
-          <groups:member groups:name="tyrA" groups:idRef="R_tyrA"/>
-          <groups:member groups:name="aroQ" groups:idRef="R_aroQ"/>
-          <groups:member groups:name="trpB" groups:idRef="R_trpB"/>
-          <groups:member groups:name="aroK" groups:idRef="R_aroK"/>
           <groups:member groups:name="trpA" groups:idRef="R_trpA"/>
+          <groups:member groups:name="NCgl0215" groups:idRef="R_NCgl0215"/>
+          <groups:member groups:name="aroG" groups:idRef="R_aroG"/>
+          <groups:member groups:name="r2_6_1_57" groups:idRef="R_r2_6_1_57"/>
+          <groups:member groups:name="aroQ" groups:idRef="R_aroQ"/>
+          <groups:member groups:name="trpEG" groups:idRef="R_trpEG"/>
+          <groups:member groups:name="aroK" groups:idRef="R_aroK"/>
+          <groups:member groups:name="trpC" groups:idRef="R_trpC"/>
+          <groups:member groups:name="tyrA" groups:idRef="R_tyrA"/>
+          <groups:member groups:name="aroC" groups:idRef="R_aroC"/>
+          <groups:member groups:name="pheA" groups:idRef="R_pheA"/>
+          <groups:member groups:name="aroB" groups:idRef="R_aroB"/>
+          <groups:member groups:name="csm" groups:idRef="R_csm"/>
+          <groups:member groups:name="trpB" groups:idRef="R_trpB"/>
+          <groups:member groups:name="aroE" groups:idRef="R_aroE"/>
+          <groups:member groups:name="trpD" groups:idRef="R_trpD"/>
+          <groups:member groups:name="aroA" groups:idRef="R_aroA"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Methionine__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Methionine__32__Metabolism" groups:name="Methionine Metabolism" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="aecD_2" groups:idRef="R_aecD_2"/>
-          <groups:member groups:name="metX" groups:idRef="R_metX"/>
-          <groups:member groups:name="sahH" groups:idRef="R_sahH"/>
-          <groups:member groups:name="metH" groups:idRef="R_metH"/>
-          <groups:member groups:name="metB" groups:idRef="R_metB"/>
           <groups:member groups:name="metY" groups:idRef="R_metY"/>
-          <groups:member groups:name="metB_2" groups:idRef="R_metB_2"/>
+          <groups:member groups:name="aecD_2" groups:idRef="R_aecD_2"/>
           <groups:member groups:name="metK" groups:idRef="R_metK"/>
           <groups:member groups:name="aecD" groups:idRef="R_aecD"/>
+          <groups:member groups:name="metX" groups:idRef="R_metX"/>
+          <groups:member groups:name="sahH" groups:idRef="R_sahH"/>
+          <groups:member groups:name="metB_2" groups:idRef="R_metB_2"/>
+          <groups:member groups:name="metH" groups:idRef="R_metH"/>
+          <groups:member groups:name="metB" groups:idRef="R_metB"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Cell__32__Envelope__32__Biosynthesis" sboTerm="SBO:0000633" groups:id="G_Cell__32__Envelope__32__Biosynthesis" groups:name="Cell Envelope Biosynthesis" groups:kind="partonomy">
         <groups:listOfMembers>
-          <groups:member groups:name="rmlA2" groups:idRef="R_rmlA2"/>
-          <groups:member groups:name="murA" groups:idRef="R_murA"/>
+          <groups:member groups:name="murB" groups:idRef="R_murB"/>
           <groups:member groups:name="glmS" groups:idRef="R_glmS"/>
+          <groups:member groups:name="r2_3_1_157" groups:idRef="R_r2_3_1_157"/>
+          <groups:member groups:name="rmlA2" groups:idRef="R_rmlA2"/>
+          <groups:member groups:name="glmU" groups:idRef="R_glmU"/>
+          <groups:member groups:name="murA" groups:idRef="R_murA"/>
           <groups:member groups:name="pmmB_2" groups:idRef="R_pmmB_2"/>
           <groups:member groups:name="galU1" groups:idRef="R_galU1"/>
-          <groups:member groups:name="murB" groups:idRef="R_murB"/>
-          <groups:member groups:name="glmU" groups:idRef="R_glmU"/>
-          <groups:member groups:name="r2_3_1_157" groups:idRef="R_r2_3_1_157"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Folate__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Folate__32__Metabolism" groups:name="Folate Metabolism" groups:kind="partonomy">
         <groups:listOfMembers>
+          <groups:member groups:name="folD2" groups:idRef="R_folD2"/>
           <groups:member groups:name="bioA" groups:idRef="R_bioA"/>
+          <groups:member groups:name="folD1" groups:idRef="R_folD1"/>
           <groups:member groups:name="MTHFR2" groups:idRef="R_MTHFR2"/>
           <groups:member groups:name="FTHFD" groups:idRef="R_FTHFD"/>
-          <groups:member groups:name="folD2" groups:idRef="R_folD2"/>
           <groups:member groups:name="bioF" groups:idRef="R_bioF"/>
           <groups:member groups:name="metF" groups:idRef="R_metF"/>
-          <groups:member groups:name="folD1" groups:idRef="R_folD1"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Transport__32__Extracellular" sboTerm="SBO:0000633" groups:id="G_Transport__32__Extracellular" groups:name="Transport Extracellular" groups:kind="partonomy">
         <groups:listOfMembers>
+          <groups:member groups:name="GLYC_d" groups:idRef="R_GLYC_d"/>
+          <groups:member groups:name="LEU_t_NA" groups:idRef="R_LEU_t_NA"/>
+          <groups:member groups:name="ETOH_d" groups:idRef="R_ETOH_d"/>
+          <groups:member groups:name="GAM_t_PEP" groups:idRef="R_GAM_t_PEP"/>
+          <groups:member groups:name="THR_d" groups:idRef="R_THR_d"/>
+          <groups:member groups:name="ILE_t_NA" groups:idRef="R_ILE_t_NA"/>
+          <groups:member groups:name="LAC-L_t_H" groups:idRef="R_LAC_L_t_H"/>
+          <groups:member groups:name="URA_t_ATP" groups:idRef="R_URA_t_ATP"/>
+          <groups:member groups:name="LYS_d" groups:idRef="R_LYS_d"/>
+          <groups:member groups:name="ARA_d" groups:idRef="R_ARA_d"/>
+          <groups:member groups:name="MET_t_ATP" groups:idRef="R_MET_t_ATP"/>
+          <groups:member groups:name="THR_t_ATP" groups:idRef="R_THR_t_ATP"/>
+          <groups:member groups:name="TYR_t_ATP" groups:idRef="R_TYR_t_ATP"/>
+          <groups:member groups:name="SER_t_NA" groups:idRef="R_SER_t_NA"/>
+          <groups:member groups:name="PPA_t_H" groups:idRef="R_PPA_t_H"/>
+          <groups:member groups:name="PHE_t_ATP" groups:idRef="R_PHE_t_ATP"/>
+          <groups:member groups:name="thfC_1" groups:idRef="R_thfC_1"/>
+          <groups:member groups:name="FOR_t_H" groups:idRef="R_FOR_t_H"/>
           <groups:member groups:name="ILE_t_ATP" groups:idRef="R_ILE_t_ATP"/>
           <groups:member groups:name="ARG_t_H" groups:idRef="R_ARG_t_H"/>
-          <groups:member groups:name="THR_d" groups:idRef="R_THR_d"/>
+          <groups:member groups:name="LAC-D_t_H" groups:idRef="R_LAC_D_t_H"/>
           <groups:member groups:name="ORN_t_ATP" groups:idRef="R_ORN_t_ATP"/>
-          <groups:member groups:name="FOR_t_H" groups:idRef="R_FOR_t_H"/>
           <groups:member groups:name="UREA_t_ATP" groups:idRef="R_UREA_t_ATP"/>
-          <groups:member groups:name="thfC_1" groups:idRef="R_thfC_1"/>
           <groups:member groups:name="NO3_t_H" groups:idRef="R_NO3_t_H"/>
           <groups:member groups:name="GLCN_t_H" groups:idRef="R_GLCN_t_H"/>
           <groups:member groups:name="GABA_t_H" groups:idRef="R_GABA_t_H"/>
           <groups:member groups:name="GLC_t_PEP" groups:idRef="R_GLC_t_PEP"/>
           <groups:member groups:name="UREA_t_H" groups:idRef="R_UREA_t_H"/>
           <groups:member groups:name="AC_t_H" groups:idRef="R_AC_t_H"/>
-          <groups:member groups:name="CO2_d" groups:idRef="R_CO2_d"/>
           <groups:member groups:name="UREA_d" groups:idRef="R_UREA_d"/>
+          <groups:member groups:name="CO2_d" groups:idRef="R_CO2_d"/>
           <groups:member groups:name="NA_t_H" groups:idRef="R_NA_t_H"/>
-          <groups:member groups:name="O2_d" groups:idRef="R_O2_d"/>
-          <groups:member groups:name="LAC-D_t_H" groups:idRef="R_LAC_D_t_H"/>
+          <groups:member groups:name="NH3_t_ATP" groups:idRef="R_NH3_t_ATP"/>
           <groups:member groups:name="NO3_d" groups:idRef="R_NO3_d"/>
+          <groups:member groups:name="O2_d" groups:idRef="R_O2_d"/>
           <groups:member groups:name="PI_t_NA" groups:idRef="R_PI_t_NA"/>
-          <groups:member groups:name="H2O_d" groups:idRef="R_H2O_d"/>
           <groups:member groups:name="ACGAM_t_PEP" groups:idRef="R_ACGAM_t_PEP"/>
+          <groups:member groups:name="H2O_d" groups:idRef="R_H2O_d"/>
           <groups:member groups:name="GLU_t_NA" groups:idRef="R_GLU_t_NA"/>
           <groups:member groups:name="PHE_d" groups:idRef="R_PHE_d"/>
           <groups:member groups:name="FE2_t_ATP" groups:idRef="R_FE2_t_ATP"/>
           <groups:member groups:name="THR_t_NA" groups:idRef="R_THR_t_NA"/>
-          <groups:member groups:name="PI_t_H" groups:idRef="R_PI_t_H"/>
           <groups:member groups:name="TYR_d" groups:idRef="R_TYR_d"/>
-          <groups:member groups:name="so3_d" groups:idRef="R_so3_d"/>
           <groups:member groups:name="FUM_t_H" groups:idRef="R_FUM_t_H"/>
+          <groups:member groups:name="PI_t_H" groups:idRef="R_PI_t_H"/>
+          <groups:member groups:name="so3_d" groups:idRef="R_so3_d"/>
           <groups:member groups:name="NCAM_d" groups:idRef="R_NCAM_d"/>
           <groups:member groups:name="ILE_d" groups:idRef="R_ILE_d"/>
           <groups:member groups:name="MAL_t_H" groups:idRef="R_MAL_t_H"/>
           <groups:member groups:name="NO2_d" groups:idRef="R_NO2_d"/>
           <groups:member groups:name="NH3_d" groups:idRef="R_NH3_d"/>
           <groups:member groups:name="SUC_t_H" groups:idRef="R_SUC_t_H"/>
-          <groups:member groups:name="GLU_t_H" groups:idRef="R_GLU_t_H"/>
           <groups:member groups:name="MET_d" groups:idRef="R_MET_d"/>
+          <groups:member groups:name="GLU_t_H" groups:idRef="R_GLU_t_H"/>
           <groups:member groups:name="NH3_t_H" groups:idRef="R_NH3_t_H"/>
           <groups:member groups:name="FRU_t_PEP" groups:idRef="R_FRU_t_PEP"/>
           <groups:member groups:name="PANT-R_d" groups:idRef="R_PANT_R_d"/>
           <groups:member groups:name="MAN_t_PEP" groups:idRef="R_MAN_t_PEP"/>
-          <groups:member groups:name="BTN_d" groups:idRef="R_BTN_d"/>
-          <groups:member groups:name="GLN_t_NA" groups:idRef="R_GLN_t_NA"/>
-          <groups:member groups:name="SUCR_t_PEP" groups:idRef="R_SUCR_t_PEP"/>
-          <groups:member groups:name="LYS_t_ALA" groups:idRef="R_LYS_t_ALA"/>
-          <groups:member groups:name="ALA_t_NA" groups:idRef="R_ALA_t_NA"/>
-          <groups:member groups:name="TRE_t_PEP" groups:idRef="R_TRE_t_PEP"/>
-          <groups:member groups:name="LYS_t_VAL" groups:idRef="R_LYS_t_VAL"/>
-          <groups:member groups:name="VAL_t_NA" groups:idRef="R_VAL_t_NA"/>
-          <groups:member groups:name="PI_t_ATP" groups:idRef="R_PI_t_ATP"/>
-          <groups:member groups:name="LYS_t_LEU" groups:idRef="R_LYS_t_LEU"/>
-          <groups:member groups:name="LYS_t_H" groups:idRef="R_LYS_t_H"/>
-          <groups:member groups:name="GLU_t_ATP" groups:idRef="R_GLU_t_ATP"/>
-          <groups:member groups:name="VAL_d" groups:idRef="R_VAL_d"/>
-          <groups:member groups:name="CIT_t_H" groups:idRef="R_CIT_t_H"/>
-          <groups:member groups:name="RIB_t_ATP" groups:idRef="R_RIB_t_ATP"/>
-          <groups:member groups:name="LEU_d" groups:idRef="R_LEU_d"/>
-          <groups:member groups:name="LEU_t_NA" groups:idRef="R_LEU_t_NA"/>
-          <groups:member groups:name="XYL_t_ATP" groups:idRef="R_XYL_t_ATP"/>
-          <groups:member groups:name="GLYC_d" groups:idRef="R_GLYC_d"/>
-          <groups:member groups:name="TYR_t_ATP" groups:idRef="R_TYR_t_ATP"/>
-          <groups:member groups:name="URA_t_ATP" groups:idRef="R_URA_t_ATP"/>
-          <groups:member groups:name="ETOH_d" groups:idRef="R_ETOH_d"/>
-          <groups:member groups:name="TRP_t_ATP" groups:idRef="R_TRP_t_ATP"/>
-          <groups:member groups:name="GAM_t_PEP" groups:idRef="R_GAM_t_PEP"/>
-          <groups:member groups:name="NH3_t_ATP" groups:idRef="R_NH3_t_ATP"/>
-          <groups:member groups:name="LAC-L_t_H" groups:idRef="R_LAC_L_t_H"/>
           <groups:member groups:name="PRO_t_NA" groups:idRef="R_PRO_t_NA"/>
-          <groups:member groups:name="so3_t_ATP" groups:idRef="R_so3_t_ATP"/>
-          <groups:member groups:name="ILE_t_NA" groups:idRef="R_ILE_t_NA"/>
+          <groups:member groups:name="BTN_d" groups:idRef="R_BTN_d"/>
+          <groups:member groups:name="SUCR_t_PEP" groups:idRef="R_SUCR_t_PEP"/>
+          <groups:member groups:name="GLN_t_NA" groups:idRef="R_GLN_t_NA"/>
+          <groups:member groups:name="LYS_t_ALA" groups:idRef="R_LYS_t_ALA"/>
+          <groups:member groups:name="TRE_t_PEP" groups:idRef="R_TRE_t_PEP"/>
+          <groups:member groups:name="ALA_t_NA" groups:idRef="R_ALA_t_NA"/>
+          <groups:member groups:name="LYS_t_VAL" groups:idRef="R_LYS_t_VAL"/>
+          <groups:member groups:name="PI_t_ATP" groups:idRef="R_PI_t_ATP"/>
+          <groups:member groups:name="VAL_t_NA" groups:idRef="R_VAL_t_NA"/>
+          <groups:member groups:name="LYS_t_LEU" groups:idRef="R_LYS_t_LEU"/>
+          <groups:member groups:name="GLU_t_ATP" groups:idRef="R_GLU_t_ATP"/>
+          <groups:member groups:name="LYS_t_H" groups:idRef="R_LYS_t_H"/>
+          <groups:member groups:name="VAL_d" groups:idRef="R_VAL_d"/>
+          <groups:member groups:name="RIB_t_ATP" groups:idRef="R_RIB_t_ATP"/>
+          <groups:member groups:name="CIT_t_H" groups:idRef="R_CIT_t_H"/>
+          <groups:member groups:name="LEU_d" groups:idRef="R_LEU_d"/>
           <groups:member groups:name="GLC_t_ATP" groups:idRef="R_GLC_t_ATP"/>
-          <groups:member groups:name="LYS_d" groups:idRef="R_LYS_d"/>
-          <groups:member groups:name="ARA_d" groups:idRef="R_ARA_d"/>
-          <groups:member groups:name="MET_t_ATP" groups:idRef="R_MET_t_ATP"/>
-          <groups:member groups:name="THR_t_ATP" groups:idRef="R_THR_t_ATP"/>
-          <groups:member groups:name="PPA_t_H" groups:idRef="R_PPA_t_H"/>
-          <groups:member groups:name="SER_t_NA" groups:idRef="R_SER_t_NA"/>
-          <groups:member groups:name="PHE_t_ATP" groups:idRef="R_PHE_t_ATP"/>
+          <groups:member groups:name="TRP_t_ATP" groups:idRef="R_TRP_t_ATP"/>
+          <groups:member groups:name="XYL_t_ATP" groups:idRef="R_XYL_t_ATP"/>
+          <groups:member groups:name="so3_t_ATP" groups:idRef="R_so3_t_ATP"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Exchange" sboTerm="SBO:0000633" groups:id="G_Exchange" groups:name="Exchange" groups:kind="partonomy">
         <groups:listOfMembers>
+          <groups:member groups:name="GAM_d" groups:idRef="R_GAM_d"/>
+          <groups:member groups:name="EX_cys_L(e)" groups:idRef="R_EX_cys_L_e"/>
+          <groups:member groups:name="EX_etoh(e)" groups:idRef="R_EX_etoh_e"/>
+          <groups:member groups:name="EX_fe2(e)" groups:idRef="R_EX_fe2_e"/>
+          <groups:member groups:name="EX_gam(e)" groups:idRef="R_EX_gam_e"/>
+          <groups:member groups:name="EX_for(e)" groups:idRef="R_EX_for_e"/>
+          <groups:member groups:name="EX_ara(e)" groups:idRef="R_EX_ara_e"/>
+          <groups:member groups:name="EX_fru(e)" groups:idRef="R_EX_fru_e"/>
+          <groups:member groups:name="GAL_d" groups:idRef="R_GAL_d"/>
+          <groups:member groups:name="EX_fum(e)" groups:idRef="R_EX_fum_e"/>
+          <groups:member groups:name="EX_ac(e)" groups:idRef="R_EX_ac_e"/>
+          <groups:member groups:name="EX_gal(e)" groups:idRef="R_EX_gal_e"/>
+          <groups:member groups:name="GLYC-R_d" groups:idRef="R_GLYC_R_d"/>
+          <groups:member groups:name="EX_glc(e)" groups:idRef="R_EX_glc_e"/>
+          <groups:member groups:name="EX_glcn(e)" groups:idRef="R_EX_glcn_e"/>
+          <groups:member groups:name="EX_pca" groups:idRef="R_EX_pca"/>
+          <groups:member groups:name="EX_gln_L(e)" groups:idRef="R_EX_gln_L_e"/>
           <groups:member groups:name="EX_glu_L(e)" groups:idRef="R_EX_glu_L_e"/>
           <groups:member groups:name="EX_gly(e)" groups:idRef="R_EX_gly_e"/>
           <groups:member groups:name="EX_glyc(e)" groups:idRef="R_EX_glyc_e"/>
-          <groups:member groups:name="EX_pca" groups:idRef="R_EX_pca"/>
           <groups:member groups:name="EX_h2o(e)" groups:idRef="R_EX_h2o_e"/>
           <groups:member groups:name="EX_his_L(e)" groups:idRef="R_EX_his_L_e"/>
+          <groups:member groups:name="ASN_d" groups:idRef="R_ASN_d"/>
           <groups:member groups:name="EX_ile_L(e)" groups:idRef="R_EX_ile_L_e"/>
           <groups:member groups:name="EX_lac_D(e)" groups:idRef="R_EX_lac_D_e"/>
+          <groups:member groups:name="ASP_d" groups:idRef="R_ASP_d"/>
           <groups:member groups:name="EX_lac_L(e)" groups:idRef="R_EX_lac_L_e"/>
           <groups:member groups:name="EX_leu_L(e)" groups:idRef="R_EX_leu_L_e"/>
           <groups:member groups:name="GLY_d" groups:idRef="R_GLY_d"/>
@@ -13987,10 +14000,10 @@
           <groups:member groups:name="HIS_d" groups:idRef="R_HIS_d"/>
           <groups:member groups:name="EX_na1(e)" groups:idRef="R_EX_na1_e"/>
           <groups:member groups:name="EX_nh3(e)" groups:idRef="R_EX_nh3_e"/>
-          <groups:member groups:name="AC_d" groups:idRef="R_AC_d"/>
           <groups:member groups:name="PPI_d" groups:idRef="R_PPI_d"/>
-          <groups:member groups:name="EX_no2(e)" groups:idRef="R_EX_no2_e"/>
           <groups:member groups:name="ITN_d" groups:idRef="R_ITN_d"/>
+          <groups:member groups:name="AC_d" groups:idRef="R_AC_d"/>
+          <groups:member groups:name="EX_no2(e)" groups:idRef="R_EX_no2_e"/>
           <groups:member groups:name="EX_no3(e)" groups:idRef="R_EX_no3_e"/>
           <groups:member groups:name="PYR_d" groups:idRef="R_PYR_d"/>
           <groups:member groups:name="EX_o2(e)" groups:idRef="R_EX_o2_e"/>
@@ -14013,14 +14026,14 @@
           <groups:member groups:name="EX_tyr_L(e)" groups:idRef="R_EX_tyr_L_e"/>
           <groups:member groups:name="EX_ura(e)" groups:idRef="R_EX_ura_e"/>
           <groups:member groups:name="EX_urea(e)" groups:idRef="R_EX_urea_e"/>
+          <groups:member groups:name="EX_4abut(e)" groups:idRef="R_EX_4abut_e"/>
           <groups:member groups:name="EX_val_L(e)" groups:idRef="R_EX_val_L_e"/>
           <groups:member groups:name="EX_xyl_D(e)" groups:idRef="R_EX_xyl_D_e"/>
-          <groups:member groups:name="EX_ncam(e)" groups:idRef="R_EX_ncam_e"/>
-          <groups:member groups:name="EX_4abut(e)" groups:idRef="R_EX_4abut_e"/>
-          <groups:member groups:name="EX_btn(e)" groups:idRef="R_EX_btn_e"/>
-          <groups:member groups:name="EX_ac(e)" groups:idRef="R_EX_ac_e"/>
-          <groups:member groups:name="EX_ppa(e)" groups:idRef="R_EX_ppa_e"/>
           <groups:member groups:name="EX_acgam(e)" groups:idRef="R_EX_acgam_e"/>
+          <groups:member groups:name="EX_ncam(e)" groups:idRef="R_EX_ncam_e"/>
+          <groups:member groups:name="EX_btn(e)" groups:idRef="R_EX_btn_e"/>
+          <groups:member groups:name="EX_co2(e)" groups:idRef="R_EX_co2_e"/>
+          <groups:member groups:name="EX_ppa(e)" groups:idRef="R_EX_ppa_e"/>
           <groups:member groups:name="EX_ala_L(e)" groups:idRef="R_EX_ala_L_e"/>
           <groups:member groups:name="EX_itn(e)" groups:idRef="R_EX_itn_e"/>
           <groups:member groups:name="EX_arg_L(e)" groups:idRef="R_EX_arg_L_e"/>
@@ -14028,24 +14041,6 @@
           <groups:member groups:name="EX_asn_L(e)" groups:idRef="R_EX_asn_L_e"/>
           <groups:member groups:name="EX_asp_L(e)" groups:idRef="R_EX_asp_L_e"/>
           <groups:member groups:name="EX_cit(e)" groups:idRef="R_EX_cit_e"/>
-          <groups:member groups:name="EX_co2(e)" groups:idRef="R_EX_co2_e"/>
-          <groups:member groups:name="GAM_d" groups:idRef="R_GAM_d"/>
-          <groups:member groups:name="EX_cys_L(e)" groups:idRef="R_EX_cys_L_e"/>
-          <groups:member groups:name="EX_etoh(e)" groups:idRef="R_EX_etoh_e"/>
-          <groups:member groups:name="EX_fe2(e)" groups:idRef="R_EX_fe2_e"/>
-          <groups:member groups:name="EX_gam(e)" groups:idRef="R_EX_gam_e"/>
-          <groups:member groups:name="EX_for(e)" groups:idRef="R_EX_for_e"/>
-          <groups:member groups:name="EX_ara(e)" groups:idRef="R_EX_ara_e"/>
-          <groups:member groups:name="EX_fru(e)" groups:idRef="R_EX_fru_e"/>
-          <groups:member groups:name="GAL_d" groups:idRef="R_GAL_d"/>
-          <groups:member groups:name="EX_fum(e)" groups:idRef="R_EX_fum_e"/>
-          <groups:member groups:name="EX_gal(e)" groups:idRef="R_EX_gal_e"/>
-          <groups:member groups:name="GLYC-R_d" groups:idRef="R_GLYC_R_d"/>
-          <groups:member groups:name="EX_glc(e)" groups:idRef="R_EX_glc_e"/>
-          <groups:member groups:name="EX_glcn(e)" groups:idRef="R_EX_glcn_e"/>
-          <groups:member groups:name="ASP_d" groups:idRef="R_ASP_d"/>
-          <groups:member groups:name="ASN_d" groups:idRef="R_ASN_d"/>
-          <groups:member groups:name="EX_gln_L(e)" groups:idRef="R_EX_gln_L_e"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="meta_G_Glyoxylate__32__Metabolism" sboTerm="SBO:0000633" groups:id="G_Glyoxylate__32__Metabolism" groups:name="Glyoxylate Metabolism" groups:kind="partonomy">
@@ -14070,6 +14065,7 @@
       </groups:group>
       <groups:group metaid="meta_G_Protocatechuic__32__Acid__32__Pathway" sboTerm="SBO:0000633" groups:id="G_Protocatechuic__32__Acid__32__Pathway" groups:name="Protocatechuic Acid Pathway" groups:kind="partonomy">
         <groups:listOfMembers>
+          <groups:member groups:name="pcaB" groups:idRef="R_pcaB"/>
           <groups:member groups:name="pcaIJ" groups:idRef="R_pcaIJ"/>
           <groups:member groups:name="pcaC" groups:idRef="R_pcaC"/>
           <groups:member groups:name="pcaL" groups:idRef="R_pcaL"/>
@@ -14077,7 +14073,6 @@
           <groups:member groups:name="pcaF" groups:idRef="R_pcaF"/>
           <groups:member groups:name="quiC" groups:idRef="R_quiC"/>
           <groups:member groups:name="pcaK" groups:idRef="R_pcaK"/>
-          <groups:member groups:name="pcaB" groups:idRef="R_pcaB"/>
         </groups:listOfMembers>
       </groups:group>
     </groups:listOfGroups>
