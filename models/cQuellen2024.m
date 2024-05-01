@@ -159,69 +159,7 @@ clear ex
 % xlabel('PCA uptake','FontSize',20);
 % ylabel('Glc uptake','FontSize',20);
 
-%% BHI 
-% Optimierungziel per Voreinstellung Wachstumsrate
-% M2=changeRxnBounds(M,'EX_glc_e',0,'b');% Glucose Uptake =0
-M2=changeRxnBounds(M,'EX_glc_e',-30,'l');% Glucose Uptake ermöglichen
-M2=changeRxnBounds(M2,'EX_glc_e',30,'u');% Glucose Uptake ermöglichen
-% Wachstumsrate festsetzen auf [0.1;0.89]
-M2=changeRxnBounds(M2,'biomass_a',0.1,'l'); % 0.79,'l');
-M2=changeRxnBounds(M2,'biomass_a',0.89,'u');
 
-% (Aminosäure/Fettsäure) Uptake ermöglichen
-M2=changeRxnBounds(M2,'EX_ala_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_arg_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_asn_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_asp_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_cys_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_gln_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_glu_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_gly_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_his_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_ile_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_leu_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_lys_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_met_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_phe_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_pro_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_ser_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_thr_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_trp_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_tyr_L_e',-10,'l');
-M2=changeRxnBounds(M2,'EX_val_L_e',-10,'l');
-
-M2=changeRxnBounds(M2,'EX_suc_e',0,'b');
-M2=changeRxnBounds(M2,'EX_cit_e',0,'b');
-M2=changeRxnBounds(M2,'EX_for_e',0,'b');
-M2=changeRxnBounds(M2,'EX_ac_e',0,'b');
-
-M2=changeRxnBounds(M2,'EX_C140',-10,'l');
-M2=changeRxnBounds(M2,'EX_C150',-10,'l');
-M2=changeRxnBounds(M2,'EX_C160',-10,'l');
-M2=changeRxnBounds(M2,'EX_C180',-10,'l');
-M2=changeRxnBounds(M2,'EX_C161',-10,'l');
-M2=changeRxnBounds(M2,'EX_C181',-10,'l');
-
-% FBA
-[fluxMapM2,SolM2, ~]=quickSolveFBA(M2, true); 
-% Kleine Flüsse auf Null runden
-for i=1:r, if(abs(fluxMapM2(i))<0.0001),fluxMapM2(i)=0;end, end
-% Indizes für FLüsse über Systemgrenze raus suchen 
-n=1;
-for i=1:r
-    if(sum(abs(M2.S(:,i)))==1)
-        ex(n)=i;n=n+1;
-    end
-end
-% Flüsse über Systemgrenze (Bezeichnung + Wert) in Variable ausgeben
-n=1;
-for i=1:length(ex)
-    if(fluxMapM2(ex(i))~=0)
-        EX2{n,1}=M2.rxns(ex(i));
-        EX2{n,2}=fluxMapM2(ex(i));
-        n=n+1;
-    end
-end
 %Netzwerk in SBML überführen
 
 % writeCbToSBML(M0,'M0_biomass');

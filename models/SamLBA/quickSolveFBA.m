@@ -15,6 +15,8 @@ function [ sol, val, status ] = quickSolveFBA( model, minNorm )
         minNorm = true;
     end
     
+    display(minNorm)
+    
     params.minNorm = minNorm;
 
     % Check constraints
