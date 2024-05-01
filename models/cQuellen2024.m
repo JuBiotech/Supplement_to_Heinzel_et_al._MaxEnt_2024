@@ -85,7 +85,7 @@ M0=changeRxnBounds(M0,'biomass_a',0.1,'b'); % Wachstumsrate festsetzen auf 0.1 (
 % M0=changeRxnBounds(M0,'biomass_a',0.096,'l');
 % M0=changeRxnBounds(M0,'biomass_a',0.0991,'u');
 
-[fluxMapM0,SolM0, ~]=quickSolveFBA(M0, true); % FBA
+[fluxMapM0,SolM0, ~]=quickSolveFBA(M0, false); % FBA
 for i=1:r, if(abs(fluxMapM0(i))<0.00001),fluxMapM0(i)=0;end, end 
 length(find(fluxMapM0~=0)) % Kleine Flüsse auf Null runden
 
@@ -125,7 +125,7 @@ M1=changeRxnBounds(M1,'biomass_a',0.493,'l');
 M1=changeRxnBounds(M1,'biomass_a',0.523,'u');
 M1=changeRxnBounds(M1,'EX_pca',-1.1,'b');% PCA Uptake festsetzen auf 1.1
 % FBA
-[fluxMapM1,SolM1, ~]=quickSolveFBA(M1, true); 
+[fluxMapM1,SolM1, ~]=quickSolveFBA(M1, false); 
 % Kleine Flüsse auf Null runden
 for i=1:r, if(abs(fluxMapM1(i))<0.00001),fluxMapM1(i)=0;end, end
 length(find(fluxMapM1~=0))
@@ -225,5 +225,5 @@ end
 %Netzwerk in SBML überführen
 
 % writeCbToSBML(M0,'M0_biomass');
-writeCbToSBML(M1,'M1_glc');
-writeCbToSBML(M2,'M2_BHI');
+% writeCbToSBML(M1,'M1_glc');
+% writeCbToSBML(M2,'M2_BHI');
