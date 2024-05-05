@@ -12,9 +12,8 @@ import pta
 # Dieser Code ist folgendermaßen gegliedert:
 # 1) Lade die benötigten Dateien und lege die Paramter fest
 # 2) Bestimme die durchschnittliche Wachstumsrate und die Varianz dieser.
-# 3) Bestimme \beta aus der Boltzmann-Verteilung + Bestimme den 
-# Monte-Carlo-Fehler.
-# 4) Stelle die Flüsse grafisch dar.
+# 3) Bestimme \beta aus der Boltzmann-Verteilung
+# 4) Stelle die Flüsse grafisch dar (Verteilung und Vgl mit Wasserstein Distanz).
 #%%
 # Hier stehen alle änderbaren Variablen.
 # Laden der Daten
