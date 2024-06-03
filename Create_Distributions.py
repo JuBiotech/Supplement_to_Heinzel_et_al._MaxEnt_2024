@@ -1,7 +1,5 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import seaborn as sns
-import scipy
 import numpy as np
 #%%
 # 0) Lade die benötigten Daten
@@ -47,12 +45,43 @@ bin_mids = [(bin_edges[i] + bin_edges[i+1]) / 2 for i in range(len(bin_edges) - 
 df_lambda = pd.DataFrame({'Data': data, 'Binned': binned_data})
 bin_counts = df_lambda['Binned'].value_counts().sort_index()
 #%%
-value = fba.loc[301, 'mean+0stds']
-plt.hist(data['samples'][0, :, 300], density=True, color="green", label="Normal-Distribution")
-plt.axvline(value, color='r', linestyle='dashed', linewidth=1, label = "FBA Solution")
-plt.bar(bin_mids, bin_counts.values, width=0.0129, align='center', edgecolor='black', label = "Empirical Growth Rate")
-plt.title('Biomass, PCA')
-plt.xlabel("Flux")
-plt.ylabel("Probability")
 
-plt.legend()
+def plotten(medium, fluxes, distribution, list_names):
+    if(medium == "PCA"):
+        if(distribution == 'Uniform-Distribution'):
+            data = np.load("C:\\Users\\carol\\Downloads\\iEZ481_PCA_Gluc_samples.npz", allow_pickle=True)
+
+        elif(distribution == 'Normal-Distribution'):
+            data = np.load("C:\\Users\\carol\\Downloads\\iEZ481_PCA_Gluc_boltzmann_samples.npz", allow_pickle=True)
+
+        else:
+            data = np.load("C:\\Users\\carol\\Downloads\\iEZ481_PCA_Gluc_gauss_samples.npz", allow_pickle=True)
+
+    else:
+        if(distribution == 'Uniform-Distribution'):
+            data = np.load("C:\\Users\\carol\\Downloads\\iEZ481_Glucose-MOPS_samples.npz", allow_pickle=True)
+        elif(distribution == 'Normal-Distribution'):
+            data = np.load("C:\\Users\\carol\\Downloads\\iEZ481_Glucose-MOPS_boltzmann_samples.npz", allow_pickle=True)
+        else:
+            data = np.load("C:\\Users\\carol\\Downloads\\iEZ481_Glucose-MOPS_gauss_samples.npz", allow_pickle=True)
+
+    for i in fluxes:
+        if(i == 300):
+            value = fba.loc[301, 'mean+0stds']
+            plt.hist(data['samples'][0, :, 300], density=True, color="green", label="Normal-Distribution")
+            plt.axvline(value, color='r', linestyle='dashed', linewidth=1, label = "FBA Solution")
+            plt.bar(bin_mids, bin_counts.values, width=0.0129, align='center', edgecolor='black', label = "Empirical Growth Rate")
+            plt.title(f'Biomass, {distribution}')
+            plt.xlabel("Flux")
+            plt.ylabel("Probability")
+
+            plt.legend()
+        else:
+            value = fba.loc[i+1, 'mean+0stds']
+            plt.hist(data['samples'][0, :, i], density=True, color="green", label= distribution)
+            plt.title(f"{list_names[i]}, {distribution}")
+            plt.xlabel("Flux")
+            plt.ylabel("Probability")
+
+            plt.legend()
+        
