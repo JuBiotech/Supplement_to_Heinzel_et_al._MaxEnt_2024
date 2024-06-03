@@ -18,7 +18,6 @@ if __name__ == "__main__":
 
     for model in models:
         print(f'finding beta for {model}')
-        model_path = os.path.join("models", f"{model}.xml")
 
         optimal_growth_rates = {}
         mean_growth_rates = {}
@@ -45,9 +44,9 @@ if __name__ == "__main__":
 
         bar_lambda = mean_growth_rates[model]
         var_lambda = std_growth_rates[model]**2
-        print(f'\t{model}mean growth rate', bar_lambda)
-        print(f'\t{model}var growth rate', var_lambda)
-        samples = np.load(os.path.join('data', f'{model}_samples.npz'))['samples']
+        print(f'\t{model} mean growth rate', bar_lambda)
+        print(f'\t{model} var growth rate', var_lambda)
+        samples = np.load(os.path.join('data', f'{model}_uniform_samples.npz'))['samples']
         n_samples = samples.shape[1]
         n_procs = samples.shape[0]
         samples = samples[:, :, biomass_index].reshape(n_samples * n_procs, -1)
@@ -59,8 +58,8 @@ if __name__ == "__main__":
         def lambda_function(flux_samples, _beta):
             shifted = _beta * flux_samples + np.log(flux_samples)
             log_res1 = logsumexp(shifted)
-            log_res2 = logsumexp(_beta*flux_samples)
-            log_res = log_res1-log_res2
+            log_res2 = logsumexp(_beta * flux_samples)
+            log_res = log_res1 - log_res2
             # print('log_res', log_res1, log_res2, log_res, 'for beta', _beta)
             return log_res
 
@@ -72,7 +71,7 @@ if __name__ == "__main__":
         def equation_to_solve(_beta):
             return -np.log(bar_lambda) + quad_integrand(_beta)
 
-        initial_guesses = [-1e6, -1e4, -1e2, 0, 1e2, 1e4, 1e6]
+        initial_guesses = [-1e2, 0, 1e2, 1e4, 1e6, 1e7]
         best_beta = None
         best_error = None
         best_initial_guess = None

@@ -1,1 +1,7 @@
 *.npz
+data/
+data_opt_bound/
+.idea/
+.ipynb_checkpoints/
+__pycache__
+

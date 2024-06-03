@@ -41,17 +41,17 @@ if __name__ == "__main__":
         cobra_model = cobra.io.read_sbml_model(model_path)
         # open up growth rate constraints
         for i, rxn in enumerate(cobra_model.reactions):
-            if rxn.id == 'biomass_a':
-                rxn.upper_bound = optimal_growth_rates[model]
+            if 'biomass' in rxn.id:
+                rxn.upper_bound = 1
                 rxn.lower_bound = 0
                 print(rxn.id, f'({rxn.name})', 'has index', i, 'bounds', rxn.lower_bound, rxn.upper_bound)
-            else:
-                print(rxn.id, 'has bounds', rxn.lower_bound, rxn.upper_bound)
-                # rxn.upper_bound = optimal_growth_rates[model]
-                # rxn.lower_bound = 0
-        print(model, 'optimal', optimal_growth_rates[model], 'mean', mean_growth_rates[model], 'std', std_growth_rates[model])
+        #     else:
+        #         pass
+        #         # print(rxn.id, 'has bounds', rxn.lower_bound, rxn.upper_bound)
+        #         # rxn.upper_bound = optimal_growth_rates[model]
+        #         # rxn.lower_bound = 0
+        # print(model, 'optimal', optimal_growth_rates[model], 'mean', mean_growth_rates[model], 'std', std_growth_rates[model])
         polytope = PolyRoundApi.cobra_model_to_polytope(cobra_model)
-        # TODO: simplify, transform round
         biomass_index = polytope.A.columns.tolist().index('biomass_a')
         print('biomass index is', biomass_index)
         polytope.A.to_csv(os.path.join('data', f'{model}_A.csv'))
