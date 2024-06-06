@@ -42,7 +42,7 @@ if __name__ == "__main__":
         # open up growth rate constraints
         for i, rxn in enumerate(cobra_model.reactions):
             if 'biomass' in rxn.id:
-                rxn.upper_bound = 1
+                rxn.upper_bound = optimal_growth_rates[model]
                 rxn.lower_bound = 0
                 print(rxn.id, f'({rxn.name})', 'has index', i, 'bounds', rxn.lower_bound, rxn.upper_bound)
         #     else:

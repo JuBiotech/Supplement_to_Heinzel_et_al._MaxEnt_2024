@@ -40,8 +40,8 @@ if __name__ == "__main__":
 
     models = [
         'iEZ481_Glucose-MOPS',
-        'iEZ481_PCA_Gluc',
-        'iEZ481_Citrat-MOPS',
+        # 'iEZ481_PCA_Gluc',
+        # 'iEZ481_Citrat-MOPS',
     ]
     for model in models:
         polytope = helpers.load_polytope('data', model)
@@ -54,7 +54,7 @@ if __name__ == "__main__":
         problem = hopsy.round(problem)
         starting_point = hopsy.compute_chebyshev_center(problem)
         # Gleichverteilte Samples
-        n_samples = 65_000
+        n_samples = 85_000
         n_procs = 4
         chains = [
             # UniformCoordinate should work well because there should not really be parameter correlations

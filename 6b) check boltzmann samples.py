@@ -6,15 +6,15 @@ import helpers
 
 if __name__ == "__main__":
     models = [
-        'iEZ481_Citrat-MOPS',
+        # 'iEZ481_Citrat-MOPS',
         'iEZ481_Glucose-MOPS',
-        'iEZ481_PCA_Gluc',
+        # 'iEZ481_PCA_Gluc',
     ]
     for model in models:
         print(f'model {model}')
         biomass_index=300
         samples = np.load(file=os.path.join('data', f'{model}_boltzmann_samples.npz'))['samples']
-        print(np.mean(samples[: , : , biomass_index]))
+        print('mean', np.mean(samples[: , : , biomass_index]))
         # # Histogramm anzeigen lassen
         plt.figure()
         plt.title(f'{model} growth rate')
