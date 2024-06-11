@@ -12,8 +12,8 @@ if __name__ == "__main__":
     biomass_index = 300
     models = [
         'iEZ481_Glucose-MOPS',
-        # 'iEZ481_PCA_Gluc',
-        # 'iEZ481_Citrat-MOPS',
+        'iEZ481_PCA_Gluc',
+        'iEZ481_Citrat-MOPS',
     ]
 
     for model in models:

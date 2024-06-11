@@ -14,13 +14,11 @@ class Boltzmann:
         self.index = index
 
     def log_density(self, x):
-        log_density = self.beta * x[self.index]
-        print('flux', x[self.index], 'log density', log_density)
-        return log_density
+        return self.beta * x[self.index]
 
 
 
-def sample(weight, polytope, n_samples):
+def sample(weight, polytope, n_samples, rounds=5):
     biomass_index = 300
     m = Boltzmann(weight, biomass_index)
     problem = hopsy.Problem(polytope.A, polytope.b, model=m)
@@ -36,13 +34,17 @@ def sample(weight, polytope, n_samples):
         chains[i].proposal.stepsize = 10
     rng = [hopsy.RandomNumberGenerator(seed=i + 1123) for i in range(n_procs)]
     print(f'start sampling beta={weight}')
-    acc, samples = hopsy.sample(chains, rng, n_samples=n_samples, thinning=5, n_procs=n_procs, progress_bar=False)
-    print('acceptance rates', acc)
-    # burn in
-    samples = samples[:, int(n_samples / 2):, :]
-    print(f'finished sampling beta={weight}')
-    print('ess was', np.min(hopsy.ess(samples[:, :, biomass_index:biomass_index + 1])))
-    samples = samples[:, :, biomass_index]
+    samples = []
+    for round in range(rounds):
+        print('round', round)
+        acc, s = hopsy.sample(chains, rng, n_samples=n_samples, thinning=5, n_procs=n_procs, progress_bar=False)
+        print('acceptance rates', acc)
+        # burn in
+        s = s[:, int(n_samples / 2):, :]
+        print(f'finished sampling beta={weight}')
+        print('ess was', np.min(hopsy.ess(s[:, :, biomass_index:biomass_index + 1])))
+        s = s[:, :, biomass_index]
+        samples += list(s.flatten())
     print('samples mean is ', np.mean(samples))
     return samples
 
@@ -63,8 +65,8 @@ def create_importance_sampling_estimator(importance_beta):
 if __name__ == "__main__":
     biomass_index = 300
     models = [
-        # 'iEZ481_Glucose-MOPS',
-        # 'iEZ481_PCA_Gluc',
+        'iEZ481_Glucose-MOPS',
+        'iEZ481_PCA_Gluc',
         'iEZ481_Citrat-MOPS',
     ]
 
@@ -85,10 +87,10 @@ if __name__ == "__main__":
         print(f'\t{model} mean growth rate', bar_lambda)
 
         best_error = 100
-        importance_beta = 500
+        importance_beta = float(pd.read_csv(f'data/{model}_beta.csv')['best_beta'][0][1:-1])
         polytope = helpers.load_polytope('data', model)
-        while np.abs(best_error) > 0.01:
-            samples = sample(importance_beta, n_samples=30000, polytope=polytope)
+        while np.abs(best_error) > 0.0001:
+            samples = sample(importance_beta, n_samples=100000, polytope=polytope)
 
             lambda_estimator = create_importance_sampling_estimator(importance_beta)
             quad_integrand = lambda x: lambda_estimator(samples, x)
