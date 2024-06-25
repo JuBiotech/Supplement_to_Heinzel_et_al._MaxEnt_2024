@@ -16,6 +16,10 @@ if __name__ == "__main__":
         problem = hopsy.add_equality_constraints(problem, A_eq=polytope.S, b_eq=polytope.h)
         biomass_index = 300
         problem = hopsy.round(problem)
+        print(model)
+        print(problem.A.shape)
+        print(problem.b.shape)
+        continue
         starting_point = hopsy.compute_chebyshev_center(problem)
         # Gleichverteilte Samples
         n_samples = 601_000

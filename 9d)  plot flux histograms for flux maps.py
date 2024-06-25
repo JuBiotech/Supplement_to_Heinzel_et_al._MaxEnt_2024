@@ -9,6 +9,7 @@ import time
 
 
 
+
 if __name__ == "__main__":
     models = [
         'iEZ481_PCA_Gluc',
@@ -48,44 +49,51 @@ if __name__ == "__main__":
     flux_names = flux_names[models[0]]
 
     n_bins = 20
-    fluxes_to_plot = \
-        ["pcaGH", "biomass_a", "acnA", "icd", "odhA", "sucD", "sdhCAB", "fumC", "mqo", "gltA", "pgi", "pyk", "pdh", "aceB", "aceA", "mdh", "odx", "pyc", "mez", "pckG", "ppc", "pfkA", "fda", "gapA", "pgk", "eno", "zwf", "opcA", "gnd", "pgm", "rpe", "rpi", "tkt_1", "tal", "tkt_2", "tpiA", "pps", "fbp", "pts", "acnB", "gapB", "actA", "pcaGF"]
+    # fluxes_to_plot = \
+        # ["pcaGH", "biomass_a", "acnA", "icd", "odhA", "sucD", "sdhCAB", "fumC", "mqo", "gltA", "pgi", "pyk", "pdh", "aceB", "aceA", "mdh", "odx", "pyc", "mez", "pckG", "ppc", "pfkA", "fda", "gapA", "pgk", "eno", "zwf", "opcA", "gnd", "pgm", "rpe", "rpi", "tkt_1", "tal", "tkt_2", "tpiA", "pps", "fbp", "pts", "acnB", "gapB", "actA", "pcaGF"]
+    fluxes_to_plot = [
+        # "acnB",
+        # "gnd",
+        # "icd",
+        # "ldh",
+        # "mdh",
+        # "pgk",
+        'tkt_2', 'pgi', 'sdhCAB', 'rpi', 'fda', 'sucD', 'gltA', 'pyc', 'pgk', 'aceA',
+    ]
     # print('plotting', len( fluxes_to_plot ), 'fluxes')
 
-    for i, flux_name in enumerate(flux_names):
-        if flux_name not in fluxes_to_plot:
-            continue
-        maximum_flux = np.max([np.max(b_samples[m][:,:,i].flatten()) for m in models])
-        minimum_flux = np.min([np.min(b_samples[m][:,:,i].flatten()) for m in models])
+    n_bins = 20
+
+    for i, flux_name in enumerate(fluxes_to_plot):
+        time.sleep(0.5)
+        flux_index = flux_names.index(flux_name)
+        maximum_flux = np.max([np.max(b_samples[m][:,:,flux_index].flatten()) for m in models])
+        minimum_flux = np.min([np.min(b_samples[m][:,:,flux_index].flatten()) for m in models])
         minimum_flux = np.min([0, minimum_flux])
         maximum_flux = np.max([maximum_flux] + [fba_results[m][flux_name].values.flatten()[0] for m in models])
         flux_range = (maximum_flux - minimum_flux)
         maximum_flux += 0.01 * flux_range
         minimum_flux -= 0.01 * flux_range
-        # print('flux', flux_name, 'has range', maximum_flux, minimum_flux)
-        plt.figure(figsize=(6, 3))
-        # print(flux_name)
-        if flux_name == "biomass_a":
-             plt.title(r"growth rate $\lambda$")
-        else:
-            plt.title(flux_name)
 
-        plt.xlim(minimum_flux, maximum_flux)
+        # densly dashed, loosely dashed, losely dotted
+        style = (0, (5, 1))
         for j, m in enumerate(models):
+            plt.figure(figsize=(2.5, 2.5))
+            plt.title(flux_name)
             # print('range', m, np.max(b_samples[m][:, :, i].flatten())), np.min(b_samples[m][:, :, i].flatten())
             fba = fba_results[m][flux_name].values.flatten()[0]
             print(m, flux_name, fba)
 
             _, bins, _ = plt.hist(
-                b_samples[m][:, :, i].flatten(),
+                b_samples[m][:, :, flux_index].flatten(),
                 bins=n_bins, # if bins is None else bins,
                 alpha=0.25,
                 density=True,
-                label=f'MaxEnt {media[m]}',
+                # label=f'MaxEnt {media[m]}',
                 color=f'C{j}',
             )
             _, bins, _ = plt.hist(
-                b_samples[m][:, :, i].flatten(),
+                b_samples[m][:, :, flux_index].flatten(),
                 bins=n_bins,  # if bins is None else bins,
                 histtype='step',
                 linewidth=3,
@@ -93,20 +101,18 @@ if __name__ == "__main__":
                 color=f'C{j}',
             )
 
-        # densly dashed, loosely dashed, losely dotted
-        styles = [(0, (5, 1)), (0, (5, 3)), (0, (5, 6))]
-        for j, m in enumerate(models):
-            plt.axvline(x=fba_results[m][flux_name].values.flatten(), color=f'C{j}', linewidth=3-j, linestyle=styles[j], label=f'FBA for {media[m]}')
+            plt.axvline(x=fba_results[m][flux_name].values.flatten(), color=f'k', linewidth=3, linestyle=style,
+                        label=f'FBA'
+                        )
 
-        if flux_name == "biomass_a":
-            plt.xlabel(r'growth rate [1/h]')
-        else:
             plt.xlabel('flux value [mmol/gwd/h]')
-        plt.ylabel('density')
-        # plt.yscale('log')
-        plt.legend()
-        plt.tight_layout()
-        plt.savefig(f'flux_images_pdf/{flux_name}.pdf')
-        plt.savefig(f'flux_images_svg/{flux_name}.svg')
-        time.sleep(0.25)
-        plt.show()
+            plt.ylabel('density')
+
+            # leg = plt.legend(bbox_to_anchor=(1.0, 1))
+            plt.tight_layout()
+            plt.title(flux_name)
+            plt.savefig(f'flux_map_components_svg/{m}_{flux_name}.svg', bbox_inches='tight',
+                        # bbox_extra_artists=(leg,))
+                        )
+            plt.show()
+

@@ -41,6 +41,7 @@ if __name__ == "__main__":
     minimal_growth_rates['iEZ481_Citrat-MOPS'] = float(citr_mu['mu'].min())
 
     for model in models:
+        print(model)
         model_path = os.path.join("models", model + ".xml")
         cobra_model = cobra.io.read_sbml_model(model_path)
         # open up growth rate constraints

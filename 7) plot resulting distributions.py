@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import hopsy
 import os
 import numpy as np
 import helpers
@@ -44,8 +43,8 @@ if __name__ == "__main__":
 
     media = {
         'iEZ481_PCA_Gluc': 'PCA',
-        'iEZ481_Glucose-MOPS': 'Glucose + PCA',
-        'iEZ481_Citrat-MOPS': 'Citrate + PCA',
+        'iEZ481_Glucose-MOPS': 'GLC',
+        'iEZ481_Citrat-MOPS': 'CIT',
     }
 
     n_cols = 3
@@ -53,6 +52,7 @@ if __name__ == "__main__":
     plt.figure(figsize=(n_cols * 3.5, n_rows * 3.5))
     plt.subplot(n_rows, n_cols, 1)
     n_bins = 20
+
     for i, model in enumerate(models):
         poltope = helpers.load_polytope('data', model)
         biomass_index = 300
@@ -69,7 +69,7 @@ if __name__ == "__main__":
         mean_string = "%.3f" % maxent_growth_rates[model]
         mean_uniform = "%.3f" % np.mean(u_samples[:, :, biomass_index])
         plt.subplot(n_rows, n_cols, i + 1)
-        plt.title(f'Growth medium {media[model]}')
+        plt.title(f'Substrate {media[model]}')
         _, bins, _ = plt.hist(
             b_samples[:, :, biomass_index].flatten(),
             bins=n_bins,
@@ -102,16 +102,30 @@ if __name__ == "__main__":
             color='C1'
         )
 
+        print(pca_gluc_mu['mu'])
+        print(pca_gluc_mu['mu'].values)
+        if model == 'iEZ481_PCA_Gluc':
+            _, bins, _ = plt.hist(pca_gluc_mu['mu'].values, density=True, bins=n_bins, color='C2', alpha=0.25)
+            plt.hist(pca_gluc_mu['mu'].values, histtype='step', density=True, color='C2', bins=bins, alpha=1)
+        elif model == 'iEZ481_Glucose-MOPS':
+            _, bins, _ = plt.hist(gluc_mu['mu'].values, density=True, bins=n_bins, color='C2', alpha=0.25)
+            plt.hist(gluc_mu['mu'].values, histtype='step', density=True, color='C2', bins=bins, alpha=1)
+        elif model == 'iEZ481_Citrat-MOPS':
+            _, bins, _ = plt.hist(citr_mu['mu'].values, density=True, bins=n_bins, color='C2', alpha=0.25, label='measured')
+            plt.hist(citr_mu['mu'].values, histtype='step', density=True, color='C2', bins=bins, alpha=1)
+        else:
+            raise RuntimeError("Error")
+
         f_length = lambda f: f()[1] - f()[0]
         f_offset = lambda f: f()[0]
-        x_scale = 0.55
-        y_scale = 0.69
+        x_scale = 0.5
+        y_scale = 0.94
         x = x_scale * f_length(plt.xlim) + f_offset(plt.xlim)
         y = y_scale * f_length(plt.ylim) + f_offset(plt.ylim)
         plt.text(x, y, rf'$\beta=${beta_string}', horizontalalignment='left', c='k')
-        plt.text(x, y * .85, r'$\bar\lambda_{measured}$'f'={lambda_bar_string}', horizontalalignment='left', c='C2')
-        plt.text(x, y * 0.7, r'$\bar\lambda_{maxent}$'f'={mean_string}', horizontalalignment='left', c='C0')
-        plt.text(x, y * 0.55, r'$\bar\lambda_{uniform}$'f'={mean_uniform}', horizontalalignment='left', c='C1')
+        plt.text(x, y * 0.9, r'$\bar\lambda_{maxent}$'f'={mean_string}/h', horizontalalignment='left', c='C0')
+        plt.text(x, y * 0.8, r'$\bar\lambda_{uniform}$'f'={mean_uniform}/h', horizontalalignment='left', c='C1')
+        plt.text(x, y * .7, r'$\bar\lambda_{measured}$'f'={lambda_bar_string}/h', horizontalalignment='left', c='C2')
 
 
         styles = [(0, (5, 1)), (0, (5, 10)), (0, (5, 15))]
@@ -137,13 +151,15 @@ if __name__ == "__main__":
             linestyle=styles[2]
         )
 
-        if i == 2:
-            plt.legend(loc='upper right', bbox_to_anchor=(1.25, 1))
+        # if i == 2:
+        #     plt.legend(loc='upper right', bbox_to_anchor=(1.55, 1))
 
         plt.xlabel(r'growth rate $\lambda$ [1/h]')
-        plt.ylabel('density')
+        plt.ylabel(r'density')
 
+    leg = plt.figlegend(loc='upper right', bbox_to_anchor=(1.175, 1))
     plt.tight_layout()
-    plt.savefig('maxentResults.pdf')
-    plt.savefig('maxentResults.svg')
+    plt.savefig('maxentResults+meas.pdf', bbox_inches='tight', bbox_extra_artists=(leg,))
+    plt.savefig('maxentResults+meas.svg', bbox_inches='tight', bbox_extra_artists=(leg,))
+    plt.savefig('maxentResults+meas.png', bbox_inches='tight', bbox_extra_artists=(leg,))
     plt.show()

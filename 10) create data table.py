@@ -39,15 +39,28 @@ if __name__ == "__main__":
     flux_names = flux_names[models[0]]
 
     fluxes_to_plot = \
-        ["biomass_a", "acnA", "icd", "odhA", "sucD", "sdhCAB", "fumC", "mqo", "gltA", "pgi", "pyk", "pdh", "aceB", "aceA", "mdh", "odx", "pyc", "mez", "pckG", "ppc", "pfkA", "fda", "gapA", "pgk", "eno", "zwf", "opcA", "gnd", "pgm", "rpe", "rpi", "tkt_1", "tal", "tkt_2", "tpiA", "pps", "fbp", "pts", "acnB", "gapB", "actA", "pcaGF"]
+        [
+            "GLC_t_PEP",
+            "pcaGH", "acnA", "icd", "odhA", "sucD", "sdhCAB", "fumC", "mqo", "gltA", "pgi", "pyk", "pdh", "aceB", "aceA", "mdh", "odx", "pyc", "mez", "pckG", "ppc", "pfkA", "fda", "gapA", "pgk", "eno", "zwf", "opcA", "gnd", "pgm", "rpe", "rpi", "tkt_1", "tal", "tkt_2", "tpiA", "pps", "fbp", "pts", "acnB", "gapB", "actA", "pcaGF"]
 
     flux_samples = {}
+    dfs = []
+    # TODO GH durch GF in title ersetzen
     for m in models:
         for i in range(b_samples[m].shape[2]):
             if flux_names[i] not in fluxes_to_plot:
+                print('skipping', flux_names[i])
                 continue
-            flux_samples[flux_names[i]] = b_samples[m][:, :, i].flatten()
+            flux_samples[flux_names[i]] = [np.mean(b_samples[m][:, :, i])]
+        flux_samples['medium'] = media[m]
 
         df = pd.DataFrame.from_dict(flux_samples)
+        df.set_index('medium', inplace=True)
+        dfs.append(df)
         print(df)
-        df.to_csv(m + "_omix.csv", index=False)
+
+        df = pd.concat(dfs)
+        # df.rename(columns={'pcaGF': 'pcaGH'}, inplace=True)
+        df.rename(columns={'GLC_t_PEP': 'pts'}, inplace=True)
+        print(df.columns)
+        df.to_csv("fluxmaps.csv", index=False)
