@@ -1,3 +1,4 @@
+.idea
 *.npz
 data/
 data_opt_bound/

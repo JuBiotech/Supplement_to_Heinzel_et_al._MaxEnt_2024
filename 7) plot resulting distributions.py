@@ -125,7 +125,7 @@ if __name__ == "__main__":
         plt.text(x, y, rf'$\beta=${beta_string}', horizontalalignment='left', c='k')
         plt.text(x, y * 0.9, r'$\bar\lambda_{maxent}$'f'={mean_string}/h', horizontalalignment='left', c='C0')
         plt.text(x, y * 0.8, r'$\bar\lambda_{uniform}$'f'={mean_uniform}/h', horizontalalignment='left', c='C1')
-        plt.text(x, y * .7, r'$\bar\lambda_{measured}$'f'={lambda_bar_string}/h', horizontalalignment='left', c='C2')
+        plt.text(x, y * .7, r'$\bar\lambda_{meas}$'f'={lambda_bar_string}/h', horizontalalignment='left', c='C2')
 
 
         styles = [(0, (5, 1)), (0, (5, 10)), (0, (5, 15))]
@@ -157,9 +157,9 @@ if __name__ == "__main__":
         plt.xlabel(r'growth rate $\lambda$ [1/h]')
         plt.ylabel(r'density')
 
-    leg = plt.figlegend(loc='upper right', bbox_to_anchor=(1.175, 1))
+    # leg = plt.figlegend(loc='upper right', bbox_to_anchor=(1.175, 1))
     plt.tight_layout()
-    plt.savefig('maxentResults+meas.pdf', bbox_inches='tight', bbox_extra_artists=(leg,))
-    plt.savefig('maxentResults+meas.svg', bbox_inches='tight', bbox_extra_artists=(leg,))
-    plt.savefig('maxentResults+meas.png', bbox_inches='tight', bbox_extra_artists=(leg,))
+    plt.savefig('maxentResults+meas.pdf', bbox_inches='tight')# , bbox_extra_artists=(leg,))
+    plt.savefig('maxentResults+meas.svg', bbox_inches='tight')# , bbox_extra_artists=(leg,))
+    plt.savefig('maxentResults+meas.png', bbox_inches='tight')# , bbox_extra_artists=(leg,))
     plt.show()
